@@ -1,12 +1,13 @@
-#include <stdio.h>
 #include <math.h>
+#include <stdio.h>
 
 float calcularMedia(float nota1, float nota2, float nota3);
 int calcularIdadeAtual(int anoNascimento, int anoAtual);
 int calcularIdade2050(int anoNascimento);
 float converterDolarParaReais(float valorDolar, float cotacaoDolar);
 float calcularAreaLosango(float diagonalMaior, float diagonalMenor);
-float calcularQuantidadeSalariosMinimos(float salarioFuncionario, float salarioMinimo);
+float calcularQuantidadeSalariosMinimos(float salarioFuncionario,
+                                        float salarioMinimo);
 float calcularHipotenusa(float cateto1, float cateto2);
 
 int main()
@@ -17,9 +18,14 @@ int main()
            "1 - Calcular media\n"
            "2 - Calcular idade\n"
            "3 - Converter valor em dólares para reais\n"
-           "4 - Calcular área de um losango\n"
-           "5 - Calcular quantidade de salários mínimos\n"
-           "6 - Calcular hipotenusa\n");
+           "4 - Calcular aumento de Sálario\n"
+           "5 - Calcular área de um losango\n"
+           "6 - Calcular Fahrenheit.\n"
+           "7 - Calcular quantidade de salários mínimos\n"
+           "8 - Calcular Pesos de uma pessoa\n"
+           "9 - Calcular hipotenusa\n"
+           "10 - Calcular Raio\n"
+           "11 - Calcular Tabuada\n");
 
     scanf("%d", &comando);
 
@@ -62,7 +68,7 @@ int main()
         printf("O valor em reais eh: %.2f\n", valorEmReais);
     }
 
-    if (comando == 4)
+    if (comando == 5)
     {
         float diagonalMaior, diagonalMenor;
         printf("Digite a diagonal maior do losango: ");
@@ -75,7 +81,7 @@ int main()
         printf("A área do losango é: %.2f\n", areaLosango);
     }
 
-    if (comando == 5)
+    if (comando == 7)
     {
         float salarioFuncionario, salarioMinimo;
         printf("Digite o valor do salário do funcionário: ");
@@ -86,10 +92,11 @@ int main()
 
         float quantidadeSalariosMinimos =
             calcularQuantidadeSalariosMinimos(salarioFuncionario, salarioMinimo);
-        printf("O funcionário recebe %.2f salários mínimos.\n", quantidadeSalariosMinimos);
+        printf("O funcionário recebe %.2f salários mínimos.\n",
+               quantidadeSalariosMinimos);
     }
 
-    if (comando == 6)
+    if (comando == 9)
     {
         float cateto1, cateto2;
         printf("Digite o valor do primeiro cateto: ");
@@ -100,6 +107,74 @@ int main()
 
         float hipotenusa = calcularHipotenusa(cateto1, cateto2);
         printf("A hipotenusa do triângulo é: %.2f\n", hipotenusa);
+    }
+
+    if (comando == 4)
+    {
+        float salario, final;
+        printf("Informe o seu salário: ");
+        scanf("%f", &salario);
+        final =
+            (salario * 0.25) + salario; // pega 25% do salario e soma com o salario.
+        printf("O salário final é: %.2f", final);
+    }
+
+    if (comando == 6)
+    {
+        float celsius, fahrenheit;
+
+        printf("Celsius = ");
+        scanf("%f", &celsius);
+
+        fahrenheit = (9 * celsius + 160) / 5;
+
+        printf("Fahrenheit = %2.f", fahrenheit);
+    }
+
+    if (comando == 8)
+    {
+        float peso, p1, p2, pfinal;
+        printf("Informe o seu peso: ");
+        scanf("%f", &peso);
+
+        p1 = (peso * 0.15) + peso;
+        printf("O peso caso engorde 15%: %.2f", p1);
+
+        p2 = (peso * 0.20);
+        pfinal = peso - p2;
+        printf("\nO peso caso emagreça 20%: %.2f", pfinal);
+    }
+
+    if (comando == 10)
+    {
+        float raio, comprimento, area, volume;
+        printf("Informe o raio de uma esfera: ");
+        scanf("%f", &raio);
+
+        comprimento = 2 * 3.14 * raio;
+        printf("O comprimento da esfera é: %.2f", comprimento);
+
+        area = 3.14 * pow(raio, 2);
+        printf("\nA area da esfera é: %.2f", area);
+
+        volume = (3 * 3.14 * pow(raio, 3)) / 4;
+        printf("\nO volume da esfera é: %.2f", volume);
+    }
+
+    if (comando == 11)
+    {
+        int numero, i;
+
+        do
+        {
+            printf("Informe um número: ");
+            scanf("%d", &numero);
+        }
+
+        while (numero < 1 || numero > 10);
+
+        for (i = 1; i <= 10; i++)
+            printf("%d * %d = %d\n", numero, i, numero * i);
     }
 
     return 0;
