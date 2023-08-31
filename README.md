@@ -4,7 +4,7 @@ Bem-vindo ao meu repositorio! Este é um breve resumo do como funciona.
 
 ## Visão Geral
 
-Atividades realizadas ao longo do semestre 2023/2 para a disciplina de Estruturas de Dados e Análise de Algoritmos da instituição de ensino superior UNA; esse é um projeto realizado em dupla por Enzo Moreira Paião (enzo-paiao) e Luiza Andrade Puger (luizapuger). 
+Atividades realizadas ao longo do semestre 2023/2 para a disciplina de Estruturas de Dados e Análise de Algoritmos da instituição de ensino superior UNA; esse é um projeto desenvolvido em dupla por Enzo Moreira Paião (enzo-paiao) e Luiza Andrade Puger (luizapuger). 
 
 Estas atividades estarão disponíveis no GitHub e em links abaixo para serem executadas via Replit.
 
