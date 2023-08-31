@@ -1,10 +1,12 @@
 # UC_Estruturas_de_dados_e_analise_de_algoritmos
 
-Bem-vindo ao Meu repositorio! Este é um breve resumo do como funciona.
+Bem-vindo ao meu repositorio! Este é um breve resumo do como funciona.
 
 ## Visão Geral
 
-Atividades que serão realizadas ao longo do semestre estarão disponíveis no GitHub e em um link abaixo para serem executadas via Replit.
+Atividades realizadas ao longo do semestre 2023/2 para a disciplina de Estruturas de Dados e Análise de Algoritmos da instituição de ensino superior UNA; esse é um projeto realizado em dupla por Enzo Moreira Paião (enzo-paiao) e Luiza Andrade Puger (luizapuger). 
+
+Estas atividades estarão disponíveis no GitHub e em links abaixo para serem executadas via Replit.
 
 ## Recursos Principais
 
