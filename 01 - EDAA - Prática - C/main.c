@@ -15,16 +15,16 @@ int main()
     int comando;
 
     printf("Digite o comando da operacao desejada:\n"
-           "1 - Calcular media\n"
+           "1 - Calcular média aritmética entre três notas\n"
            "2 - Calcular idade\n"
            "3 - Converter valor em dólares para reais\n"
-           "4 - Calcular aumento de Sálario\n"
+           "4 - Calcular aumento de sálario\n"
            "5 - Calcular área de um losango\n"
-           "6 - Calcular Fahrenheit.\n"
-           "7 - Calcular quantidade de salários mínimos\n"
-           "8 - Calcular Pesos de uma pessoa\n"
-           "9 - Calcular hipotenusa\n"
-           "10 - Calcular Raio\n"
+           "6 - Convetor de Celsius para Fahrenheit.\n"
+           "7 - Calcular quantidade de salários mínimos recebidos\n"
+           "8 - Calcular o peso de uma pessoa se ela engordar ou emagrecer\n"
+           "9 - Calcular a hipotenusa\n"
+           "10 - Calcular o comprimento, a área e o volume de uma esfera\n"
            "11 - Calcular Tabuada\n");
 
     scanf("%d", &comando);
