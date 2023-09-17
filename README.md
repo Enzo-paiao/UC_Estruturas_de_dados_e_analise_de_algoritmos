@@ -10,6 +10,6 @@ Estas atividades estarão disponíveis no GitHub e em links abaixo para serem ex
 
 ## Recursos Principais
 
-- [x] Atividade 01: https://replit.com/@EnzoPaiao/Atividade-1-UCEstruturasdedadoseanalisedealgoritmos.
+- [x] Atividade 01: https://replit.com/@EnzoPaiao/Atividade-1-UCEstruturasdedadoseanalisedealgoritmos
 - [x] Atividade 02: https://replit.com/@LuizaPuger/Atividade-2-UCEstruturasdedadoseanalisedealgoritmos#main.c
-- [ ] Recurso 3: Descrição do recurso 3 (planejado).
+- [x] Atividade 03: https://replit.com/@EnzoPaiao/StringsC.
