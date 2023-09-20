@@ -13,3 +13,5 @@ Estas atividades estarão disponíveis no GitHub e em links abaixo para serem ex
 - [x] Atividade 01: https://replit.com/@EnzoPaiao/Atividade-1-UCEstruturasdedadoseanalisedealgoritmos
 - [x] Atividade 02: https://replit.com/@LuizaPuger/Atividade-2-UCEstruturasdedadoseanalisedealgoritmos#main.c
 - [x] Atividade 03: https://replit.com/@EnzoPaiao/Atividade-3-UCEstruturasdedadoseanalisedealgoritmos
+- [x] Atividade 04: https://replit.com/@LuizaPuger/Atividade-4-UCEstruturasdedadoseanalisedealgoritmos
+- [ ] Atividade 05:
