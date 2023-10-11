@@ -19,4 +19,4 @@ Estas atividades estarão disponíveis no GitHub e em links abaixo para serem ex
 - [ ] Atividade 07:
 - [x] Atividade 08: https://replit.com/@EnzoPaiao/Atividade-8-UCEstruturasdedadoseanalisedealgoritmos#main.c
 - [ ] Atividade 09: https://replit.com/@EnzoPaiao/Atividade-9-UCEstruturasdedadoseanalisedealgoritmos#main.c
-- [ ] Atividade 10:
+- [ ] Atividade 10: https://replit.com/@EnzoPaiao/10-UCEstruturasdedadoseanalisedealgoritmos
