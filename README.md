@@ -23,6 +23,6 @@ Estas atividades estarão disponíveis no GitHub e em links abaixo para serem ex
 - [x] Atividade 11 - Deque:  
       ● Questão 1: https://replit.com/@LuizaPuger/Deque-Questao-1  
       ● Questão 2: https://replit.com/@LuizaPuger/Deque-Questao-2
-- [ ] Atividade 12 - Conjunto:
-      Questão 1: https://replit.com/@LuizaPuger/Conjunto-Questao-1
+- [ ] Atividade 12 - Conjunto:  
+      Questão 1: https://replit.com/@LuizaPuger/Conjunto-Questao-1  
       Questão 2: https://replit.com/@LuizaPuger/Conjunto-Questao-2
