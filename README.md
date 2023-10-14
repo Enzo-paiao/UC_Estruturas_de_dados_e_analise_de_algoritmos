@@ -1,6 +1,6 @@
 # UC_Estruturas_de_dados_e_analise_de_algoritmos
 
-Bem-vindo ao meu repositorio! Este é um breve resumo do como funciona.
+Bem-vindo ao nosso repositorio! Este é um breve resumo do como funciona.
 
 ## Visão Geral
 
