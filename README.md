@@ -20,7 +20,7 @@ Estas atividades estarão disponíveis no GitHub e em links abaixo para serem ex
 - [x] Atividade 08 - Pilha com Alocação Dinâmica: https://replit.com/@EnzoPaiao/Atividade-8-UCEstruturasdedadoseanalisedealgoritmos#main.c
 - [x] Atividade 09 - Fila com Alocação Dinâmica: https://replit.com/@EnzoPaiao/Atividade-9-UCEstruturasdedadoseanalisedealgoritmos#main.c
 - [x] Atividade 10 - Lista com Alocação Dinâmica: https://replit.com/@EnzoPaiao/10-UCEstruturasdedadoseanalisedealgoritmos
-- [ ] Atividade 11 - Deque:
+- [x] Atividade 11 - Deque:
       Questão 1: https://replit.com/@LuizaPuger/Deque-Questao-1
       Questão 2: https://replit.com/@LuizaPuger/Deque-Questao-2
 - [ ] Atividade 12 - Conjunto:
