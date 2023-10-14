@@ -10,13 +10,19 @@ Estas atividades estarão disponíveis no GitHub e em links abaixo para serem ex
 
 ## Recursos Principais
 
-- [x] Atividade 01: https://replit.com/@EnzoPaiao/Atividade-1-UCEstruturasdedadoseanalisedealgoritmos
-- [x] Atividade 02: https://replit.com/@LuizaPuger/Atividade-2-UCEstruturasdedadoseanalisedealgoritmos#main.c
-- [x] Atividade 03: https://replit.com/@EnzoPaiao/Atividade-3-UCEstruturasdedadoseanalisedealgoritmos
-- [x] Atividade 04: https://replit.com/@LuizaPuger/Atividade-4-UCEstruturasdedadoseanalisedealgoritmos
-- [ ] Atividade 05:
-- [ ] Atividade 06:
-- [ ] Atividade 07:
-- [x] Atividade 08: https://replit.com/@EnzoPaiao/Atividade-8-UCEstruturasdedadoseanalisedealgoritmos#main.c
-- [x] Atividade 09: https://replit.com/@EnzoPaiao/Atividade-9-UCEstruturasdedadoseanalisedealgoritmos#main.c
-- [x] Atividade 10: https://replit.com/@EnzoPaiao/10-UCEstruturasdedadoseanalisedealgoritmos
+- [x] Atividade 01 - EDAA - Prática - C: https://replit.com/@EnzoPaiao/Atividade-1-UCEstruturasdedadoseanalisedealgoritmos
+- [x] Atividade 02 - Alocação Dinâmica de Memórias: https://replit.com/@LuizaPuger/Atividade-2-UCEstruturasdedadoseanalisedealgoritmos#main.c
+- [x] Atividade 03 - Strings: https://replit.com/@EnzoPaiao/Atividade-3-UCEstruturasdedadoseanalisedealgoritmos
+- [x] Atividade 04 - Recursividade: https://replit.com/@LuizaPuger/Atividade-4-UCEstruturasdedadoseanalisedealgoritmos
+- [ ] Atividade 05 - Pilha:
+- [ ] Atividade 06 - Fila:
+- [ ] Atividade 07 - Lista:
+- [x] Atividade 08 - Pilha com Alocação Dinâmica: https://replit.com/@EnzoPaiao/Atividade-8-UCEstruturasdedadoseanalisedealgoritmos#main.c
+- [x] Atividade 09 - Fila com Alocação Dinâmica: https://replit.com/@EnzoPaiao/Atividade-9-UCEstruturasdedadoseanalisedealgoritmos#main.c
+- [x] Atividade 10 - Lista com Alocação Dinâmica: https://replit.com/@EnzoPaiao/10-UCEstruturasdedadoseanalisedealgoritmos
+- [ ] Atividade 11 - Deque:
+      Questão 1: https://replit.com/@LuizaPuger/Deque-Questao-1
+      Questão 2: https://replit.com/@LuizaPuger/Deque-Questao-2
+- [ ] Atividade 12 - Conjunto:
+      Questão 1: https://replit.com/@LuizaPuger/Conjunto-Questao-1
+      Questão 2: https://replit.com/@LuizaPuger/Conjunto-Questao-2
