@@ -15,7 +15,7 @@ Estas atividades estarão disponíveis no GitHub e em links abaixo para serem ex
 - [x] Atividade 03 - Strings: https://replit.com/@EnzoPaiao/Atividade-3-UCEstruturasdedadoseanalisedealgoritmos
 - [x] Atividade 04 - Recursividade: https://replit.com/@LuizaPuger/Atividade-4-UCEstruturasdedadoseanalisedealgoritmos
 - [ ] Atividade 05 - Pilha:
-- [ ] Atividade 06 - Fila: https://replit.com/@LuizaPuger/Atividade-6-UCEstruturasdedadoseanalisedealgoritmos
+- [x] Atividade 06 - Fila: https://replit.com/@LuizaPuger/Atividade-6-UCEstruturasdedadoseanalisedealgoritmos
 - [x] Atividade 07 - Lista: https://replit.com/@EnzoPaiao/Atividade-7-UCEstruturasdedadoseanalisedealgoritmos
 - [x] Atividade 08 - Pilha com Alocação Dinâmica: https://replit.com/@EnzoPaiao/Atividade-8-UCEstruturasdedadoseanalisedealgoritmos#main.c
 - [x] Atividade 09 - Fila com Alocação Dinâmica: https://replit.com/@EnzoPaiao/Atividade-9-UCEstruturasdedadoseanalisedealgoritmos#main.c
