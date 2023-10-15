@@ -1,0 +1,12 @@
+Este código é um programa em C que oferece várias operações diferentes, dependendo do comando inserido pelo usuário. O programa apresenta um menu com várias opções numeradas e, em seguida, aguarda a entrada do usuário para selecionar uma das opções. Depois que o usuário seleciona uma opção, o programa executa a operação correspondente.
+
+calcularMedia: Calcula a média aritmética de três notas.
+calcularIdadeAtual e calcularIdade2050: Calcula a idade com base no ano de nascimento e no ano atual. Também calcula a idade em 2050 com base no ano de nascimento.
+converterDolarParaReais: Converte um valor em dólares para reais com base na taxa de câmbio fornecida.
+calcularAreaLosango: Calcula a área de um losango com base nas diagonais fornecidas.
+calcularQuantidadeSalariosMinimos: Calcula quantos salários mínimos um funcionário recebe com base em seu salário e no valor do salário mínimo.
+calcularHipotenusa: Calcula a hipotenusa de um triângulo com base nos catetos fornecidos.
+Além disso, o programa realiza outras operações matemáticas simples, como cálculos de aumento e redução de salário, conversão de Celsius para Fahrenheit e cálculos relacionados a uma esfera.
+
+
+O código é estruturado de forma a realizar as operações de acordo com o comando inserido pelo usuário usando condicionais if. Cada bloco if é responsável por executar uma determinada operação com base no valor de 'comando' fornecido pelo usuário. Se 'comando' corresponder a um número específico, a operação correspondente será realizada e os resultados serão exibidos na tela.
