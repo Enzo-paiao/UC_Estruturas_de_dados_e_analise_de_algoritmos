@@ -1,0 +1,25 @@
+Este programa em C apresenta três estruturas de dados e permite ao usuário selecionar uma das opções para executar operações específicas. 
+O programa é dividido em três seções principais, cada uma correspondendo a uma estrutura de dados diferente.
+
+Array de múltiplos:
+
+O programa permite ao usuário inserir o tamanho do array.
+Em seguida, ele aloca dinamicamente memória para o array usando calloc.
+Popula o array com múltiplos de 10.
+Finalmente, o array é impresso e a memória é liberada.
+Código Pessoa:
+
+O programa solicita ao usuário que insira o tamanho do vetor de pessoas.
+Em seguida, a função alocarPessoa aloca dinamicamente memória para o vetor de pessoas.
+A função preencherPessoa permite que o usuário preencha os detalhes de cada pessoa no vetor.
+A função imprimirPessoa imprime os detalhes de cada pessoa no vetor.
+A memória alocada é liberada após a conclusão das operações.
+Código Veiculo:
+
+O programa pede ao usuário que insira o tamanho do vetor de veículos.
+A função alocarVeiculo aloca dinamicamente memória para o vetor de veículos.
+A função preencherVeiculo preenche os detalhes de cada veículo no vetor automaticamente.
+A função imprimirVeiculo imprime os detalhes de cada veículo no vetor.
+A memória alocada é liberada após a conclusão das operações.
+O programa verifica se a alocação de memória foi bem-sucedida e se o tamanho do vetor ou array é válido. 
+Se alguma das verificações falhar, o programa exibirá mensagens de erro apropriadas.
