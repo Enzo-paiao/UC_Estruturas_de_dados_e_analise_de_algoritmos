@@ -1,0 +1,42 @@
+O código é uma implementação de um deque (Double-Ended Queue) em C. 
+Um deque é uma estrutura de dados que permite a inserção e remoção eficiente de elementos tanto no início quanto no final da fila. 
+O código inclui funções para inicialização, inserção, remoção, acesso, pesquisa, atualização e verificação do estado do deque.
+Estrutura do Deque (Deque):
+
+A estrutura Deque contém os seguintes campos:
+
+int data[MAX_SIZE]: Um array para armazenar os elementos do deque.
+int front: Um índice que aponta para o início do deque.
+int rear: Um índice que aponta para o final do deque.
+int size: O número de elementos no deque.
+Funções de Inicialização:
+
+void initDeque(Deque *deque): Inicializa um deque vazio, definindo front e rear como -1 e size como 0.
+Funções de Verificação:
+
+bool isEmpty(Deque *deque): Retorna verdadeiro se o deque estiver vazio, ou seja, size é igual a 0.
+bool isFull(Deque *deque): Retorna verdadeiro se o deque estiver cheio, ou seja, size é igual a MAX_SIZE.
+Funções de Inserção:
+
+void pushFront(Deque *deque, int value): Insere um elemento no início do deque.
+void pushBack(Deque *deque, int value): Insere um elemento no final do deque.
+Funções de Remoção:
+
+int popFront(Deque *deque): Remove e retorna o elemento do início do deque.
+int popBack(Deque *deque): Remove e retorna o elemento do final do deque.
+Funções de Acesso:
+
+int front(Deque *deque): Retorna o elemento do início do deque sem removê-lo.
+int back(Deque *deque): Retorna o elemento do final do deque sem removê-lo.
+Funções de Tamanho e Pesquisa:
+
+int size(Deque *deque): Retorna o número de elementos no deque.
+int search(Deque *deque, int value): Pesquisa um elemento no deque e retorna o índice em que foi encontrado (-1 se não for encontrado).
+Função de Atualização:
+
+void updateElement(Deque *deque, int index, int newValue): Atualiza um elemento no deque no índice especificado.
+Função Main:
+
+No main(), o código permite que o usuário escolha entre várias operações, incluindo inserção, remoção, acesso,
+verificação de estado, pesquisa e atualização do deque. O programa executa um loop até que o usuário escolha a opção de saída (0).
+Este código fornece uma implementação básica de um deque, permitindo que você execute várias operações e verifique seu funcionamento.

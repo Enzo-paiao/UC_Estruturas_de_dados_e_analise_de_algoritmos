@@ -1,0 +1,63 @@
+O código é uma implementação de um deque (Double-Ended Queue) usando uma lista duplamente encadeada em C. 
+O deque é uma estrutura de dados que permite a inserção e remoção eficiente de elementos tanto no início quanto no final da fila. 
+Aqui está uma explicação detalhada das principais partes do código:
+
+Estrutura do Nó (Node):
+
+A estrutura Node representa um nó da lista duplamente encadeada e contém os seguintes campos:
+
+int data: Armazena o valor do nó.
+struct Node *next: Ponteiro para o próximo nó na lista.
+struct Node *prev: Ponteiro para o nó anterior na lista.
+Estrutura do Deque (Deque):
+
+A estrutura Deque contém dois ponteiros:
+
+Node *front: Aponta para o nó do início do deque.
+Node *rear: Aponta para o nó do final do deque.
+Função createNode(int value):
+
+Cria um novo nó com o valor especificado e retorna um ponteiro para o nó criado.
+
+Função createDeque():
+
+Cria um deque vazio (com front e rear definidos como NULL) e retorna um ponteiro para o deque.
+
+Função isEmpty(Deque *deque):
+
+Verifica se o deque está vazio, retornando verdadeiro (true) se front for NULL.
+
+Funções de Inserção:
+
+pushFront(Deque *deque, int value): Insere um elemento no início do deque.
+pushBack(Deque *deque, int value): Insere um elemento no final do deque.
+Funções de Remoção:
+
+popFront(Deque *deque): Remove e retorna o elemento do início do deque.
+popBack(Deque *deque): Remove e retorna o elemento do final do deque.
+Funções de Acesso:
+
+front(Deque *deque): Retorna o valor do elemento no início do deque.
+back(Deque *deque): Retorna o valor do elemento no final do deque.
+Função size(Deque *deque):
+
+Calcula o tamanho do deque percorrendo os nós e contando quantos elementos existem.
+
+Função search(Deque *deque, int value):
+
+Pesquisa um elemento no deque e retorna o índice do primeiro nó onde o valor é encontrado (-1 se não for encontrado).
+
+Função updateElement(Deque *deque, int index, int newValue):
+
+Atualiza o valor de um elemento no deque no índice especificado.
+
+Função freeDeque(Deque *deque):
+
+Libera a memória alocada para o deque, desalocando cada nó.
+
+Função main():
+
+Cria um deque vazio.
+Permite ao usuário escolher entre várias operações, incluindo inserção, remoção, acesso, verificação de estado, pesquisa e atualização do deque.
+O loop continua até que o usuário escolha a opção de sair (0).
+No final, a memória alocada para o deque é liberada usando a função freeDeque.
