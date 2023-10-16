@@ -1,0 +1,20 @@
+Função main:
+
+Inicializa as variáveis e estruturas de dados necessárias.
+Permite ao usuário escolher entre quatro opções: 3 elementos, 10 elementos, 10 CPFs ou uma fila circular.
+Executa as operações apropriadas com base na escolha do usuário.
+Funções de Manipulação da Fila de Elementos:
+
+As funções CriarFila, FilaVazia, FilaCheia, Enfileirar, Desenfileirar, ImprimeFila, DesenfileirarEGravar e LerDoArquivoEEnfileirar são usadas para criar, manipular e operar uma fila de elementos do tipo float.
+Funções de Manipulação de Funcionários:
+
+As funções CF, FV, FC, EF, DS, GravarEmArquivoBinario, LerDeArquivoBinario, PesquisarPorCPF e IF são usadas para manipular uma fila de funcionários (structs do tipo funcionario) e gravar/ler esses funcionários de/para um arquivo binário.
+Funções da Fila Circular:
+
+As funções CriarFila_F4, FilaVazia_F4, FilaCheia_F4, Enfileirar_F4, Desenfileirar_F4 e MostrarFila_F4 são usadas para criar, manipular e operar uma fila circular de inteiros.
+
+A aplicação oferece a funcionalidade de escolher entre diferentes tipos de operações de fila, dependendo da escolha do usuário. 
+Por exemplo, ele permite ao usuário enfileirar números reais e depois desenfileirá-los e gravá-los em um arquivo de texto. 
+Também permite ler do arquivo e enfileirar novamente. 
+Para a opção de 10 CPFs, é possível cadastrar funcionários com várias informações (CPF, nome, telefone, etc.), gravar esses funcionários em um arquivo binário, ler esse arquivo e pesquisar por CPF. 
+Por fim, para a opção da fila circular, é possível enfileirar e desenfileirar elementos inteiros e mostrar o conteúdo da fila.
