@@ -1,0 +1,17 @@
+Este programa em C permite ao usuário inserir um caractere e escolher uma função de verificação para determinar suas propriedades. 
+As funções utilizadas são da biblioteca ctype.h, que contém funções para determinar se um caractere é uma letra maiúscula, minúscula, um dígito ou uma letra alfabética. Aqui está uma explicação do programa:
+
+isAlpha(char c): Esta função verifica se o caractere fornecido é uma letra alfabética (maiúscula ou minúscula). Ela utiliza a função isalpha da biblioteca ctype.h para realizar essa verificação.
+
+Solicita ao usuário que insira um caractere.
+Solicita ao usuário que escolha uma função de verificação (1 a 5) para executar no caractere inserido.
+Com base na escolha, um switch é usado para chamar a função relevante e exibir uma mensagem correspondente dependendo do resultado da função.
+As funções usadas são:
+
+isdigit(c): Verifica se o caractere é um dígito numérico.
+isupper(c): Verifica se o caractere é uma letra maiúscula.
+islower(c): Verifica se o caractere é uma letra minúscula.
+isalnum(c): Verifica se o caractere é uma letra alfabética ou um dígito numérico.
+isAlpha(c): Chama a função personalizada isAlpha para verificar se o caractere é uma letra alfabética.
+O programa imprime uma mensagem indicando se o caractere atende à condição da função selecionada ou não. 
+Se a opção fornecida pelo usuário não estiver entre 1 e 5, o programa exibirá uma mensagem de "Opção inválida".
