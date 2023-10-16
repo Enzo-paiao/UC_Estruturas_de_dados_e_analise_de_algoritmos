@@ -1,0 +1,53 @@
+O código é uma implementação de operações em conjuntos (ou sets) em C, utilizando vetores. 
+Ele permite criar, modificar e realizar operações de conjunto, como união, interseção e diferença entre conjuntos. 
+Aqui está uma explicação detalhada das principais partes do código:
+
+Estrutura do Conjunto (Conjunto):
+
+A estrutura Conjunto representa um conjunto e contém os seguintes campos:
+
+int data[MAX_SIZE]: Armazena os elementos do conjunto em um vetor.
+int size: Armazena o tamanho atual do conjunto, isto é, quantos elementos estão presentes no vetor.
+Função createConjunto(Conjunto *conjunto):
+
+Inicializa um conjunto vazio, definindo o tamanho (size) como 0.
+
+Função isEmpty(Conjunto *conjunto):
+
+Verifica se o conjunto está vazio, retornando verdadeiro (true) se o tamanho for igual a 0.
+
+Função contains(Conjunto *conjunto, int value):
+
+Verifica se um determinado valor pertence ao conjunto, percorrendo o vetor e procurando por uma correspondência. 
+Retorna verdadeiro (true) se o valor for encontrado e falso (false) caso contrário.
+
+Função insert(Conjunto *conjunto, int value):
+
+Insere um elemento no conjunto apenas se ele ainda não estiver presente no conjunto.
+
+Função removeElement(Conjunto *conjunto, int value):
+
+Remove um elemento específico do conjunto, se estiver presente, deslocando os elementos seguintes para ocupar o espaço vazio.
+
+Funções de Conjunto:
+
+unionConjunto(Conjunto *result, Conjunto *conjunto1, Conjunto *conjunto2): Calcula a união de dois conjuntos e armazena o resultado em result.
+intersection(Conjunto *result, Conjunto *conjunto1, Conjunto *conjunto2): Calcula a interseção de dois conjuntos e armazena o resultado em result.
+difference(Conjunto *result, Conjunto *conjunto1, Conjunto *conjunto2): Calcula a diferença entre dois conjuntos e armazena o resultado em result.
+Função size(Conjunto *conjunto):
+
+Retorna o tamanho atual do conjunto, que é a quantidade de elementos no vetor data.
+
+Função updateElement(Conjunto *conjunto, int oldValue, int newValue):
+
+Atualiza um elemento no conjunto, desde que o novo valor não exista no conjunto (evita duplicatas). 
+A função procura o valor antigo no conjunto e o substitui pelo novo valor.
+
+Função main():
+
+Cria dois conjuntos (conjunto1 e conjunto2) e um conjunto de resultado (resultado).
+Permite ao usuário escolher entre várias operações, incluindo inserção, remoção, verificação de pertinência, 
+cálculo de operações de conjunto, verificação de estado, obtenção do tamanho e atualização de elementos.
+O loop continua até que o usuário escolha a opção de sair (0).
+Quando o tamanho máximo (MAX_SIZE) é atingido. Note que, como a implementação usa um vetor, a eficiência de algumas operações pode ser afetada em conjuntos grandes, 
+uma vez que é necessário percorrer todos os elementos para verificar a pertinência ou realizar operações de conjunto. 

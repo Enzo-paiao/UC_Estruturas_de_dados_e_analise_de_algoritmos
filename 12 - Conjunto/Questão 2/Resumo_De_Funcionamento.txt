@@ -1,0 +1,71 @@
+Esse código implementa operações de conjuntos em C usando listas encadeadas. 
+A estrutura Conjunto é definida como uma lista encadeada de elementos do tipo Node, onde cada Node contém um inteiro data e um ponteiro next para o próximo nó. 
+Aqui está uma explicação detalhada do código:
+
+Estrutura do Nó (Node):
+
+A estrutura Node representa um nó em uma lista encadeada e contém os seguintes campos:
+
+int data: Armazena o valor do elemento.
+struct Node* next: Ponteiro para o próximo nó na lista encadeada.
+Estrutura do Conjunto (Conjunto):
+
+A estrutura Conjunto representa um conjunto e contém os seguintes campos:
+
+Node* head: Ponteiro para o primeiro nó da lista encadeada.
+int size: Armazena o tamanho atual do conjunto, que é a quantidade de elementos na lista encadeada.
+Função createConjunto(Conjunto *conjunto):
+
+Inicializa um conjunto vazio, definindo o ponteiro head como nulo e o tamanho (size) como 0.
+
+Função isEmpty(Conjunto *conjunto):
+
+Verifica se o conjunto está vazio, retornando verdadeiro (true) se o tamanho for igual a 0.
+
+Função contains(Conjunto *conjunto, int value):
+
+Percorre a lista encadeada para verificar se um determinado valor pertence ao conjunto. Retorna verdadeiro (true) se o valor for encontrado e falso (false) caso contrário.
+
+Função insert(Conjunto *conjunto, int value):
+
+Insere um elemento no conjunto apenas se ele ainda não estiver presente no conjunto. Isso envolve a criação de um novo nó e ajustes nos ponteiros da lista encadeada.
+
+Função removeElement(Conjunto *conjunto, int value):
+
+Remove um elemento específico do conjunto, se estiver presente, ajustando os ponteiros na lista encadeada e liberando a memória alocada para o nó removido.
+
+Funções de Conjunto:
+
+unionConjunto(Conjunto conjunto1, Conjunto conjunto2): Calcula a união de dois conjuntos e retorna um novo conjunto como resultado. 
+A função cria uma nova lista encadeada e insere todos os elementos dos conjuntos originais nela.
+
+intersection(Conjunto conjunto1, Conjunto conjunto2): Calcula a interseção de dois conjuntos e retorna um novo conjunto como resultado. 
+A função cria uma nova lista encadeada e insere os elementos comuns entre os conjuntos originais nela.
+
+difference(Conjunto conjunto1, Conjunto conjunto2): Calcula a diferença entre dois conjuntos e retorna um novo conjunto como resultado. 
+A função cria uma nova lista encadeada e insere os elementos que estão em conjunto1 e não em conjunto2.
+
+Função size(Conjunto *conjunto):
+
+Retorna o tamanho atual do conjunto, que é a quantidade de elementos na lista encadeada.
+
+Função updateElement(Conjunto *conjunto, int oldValue, int newValue):
+
+Atualiza um elemento no conjunto, desde que o novo valor não exista no conjunto (evita duplicatas). 
+A função percorre a lista encadeada para encontrar o valor antigo e atualiza-o.
+
+Função clear(Conjunto *conjunto):
+
+Libera a memória alocada para os nós na lista encadeada e redefine o conjunto como vazio.
+
+Função main():
+
+Cria dois conjuntos (conjunto1 e conjunto2) e um conjunto de resultado (resultado).
+Permite ao usuário escolher entre várias operações, incluindo inserção, remoção, verificação de pertinência, cálculo de operações de conjunto, 
+verificação de estado, obtenção do tamanho e atualização de elementos.
+O loop continua até que o usuário escolha a opção de sair (0).
+Liberação de Memória:
+
+O código faz um bom trabalho na liberação de memória alocada para os nós e conjuntos antes de encerrar o programa. Isso é importante para evitar vazamentos de memória.
+Note que, como a implementação usa listas encadeadas, a inserção e a remoção de elementos podem ser mais eficientes do que em uma implementação baseada em vetores, 
+especialmente para conjuntos grandes. No entanto, as operações de busca podem ser mais demoradas, já que é necessário percorrer a lista.
