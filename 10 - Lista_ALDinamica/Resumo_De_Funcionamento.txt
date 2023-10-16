@@ -28,7 +28,8 @@ Pesquisa de um aluno na lista duplamente encadeada por nome.
 Pesquisa de um aluno na lista duplamente encadeada por código.
 Os arquivos de cabeçalho contêm as definições das estruturas de dados e protótipos das funções, enquanto os arquivos de implementação contêm as implementações reais das funções.
 
-Esse código cria um menu interativo para permitir ao usuário escolher o tipo de lista e realizar operações como inserção, listagem e pesquisa de alunos. A estrutura das listas é definida com campos como código e nome do aluno, e as operações são implementadas com funções específicas para cada tipo de lista.
+Esse código cria um menu interativo para permitir ao usuário escolher o tipo de lista e realizar operações como inserção, listagem e pesquisa de alunos. 
+A estrutura das listas é definida com campos como código e nome do aluno, e as operações são implementadas com funções específicas para cada tipo de lista.
 
 Estrutura de Dados Aluno (lista.h):
 
@@ -39,20 +40,29 @@ char nome[50]: Armazena o nome do aluno.
 struct Aluno *proximo: Um ponteiro para o próximo nó da lista.
 Funções de Comparação (lista.h):
 
-int CompararNomes(const char *nome1, const char *nome2): Essa função compara dois nomes de alunos e retorna 0 se forem iguais, um número negativo se nome1 for menor que nome2, e um número positivo se nome1 for maior que nome2.
+int CompararNomes(const char *nome1, const char *nome2): Essa função compara dois nomes de alunos e retorna 0 se forem iguais, 
+um número negativo se nome1 for menor que nome2, e um número positivo se nome1 for maior que nome2.
 
-int CompararCodigos(int codigo1, int codigo2): Essa função compara dois códigos de alunos e retorna 0 se forem iguais, um número negativo se codigo1 for menor que codigo2, e um número positivo se codigo1 for maior que codigo2.
+int CompararCodigos(int codigo1, int codigo2): Essa função compara dois códigos de alunos e retorna 0 se forem iguais, 
+um número negativo se codigo1 for menor que codigo2, e um número positivo se codigo1 for maior que codigo2.
 
 Função de Inserção na Lista Encadeada Simples (lista.h):
 
-Aluno* InserirAluno(Aluno* lista, int codigo, const char* nome): Essa função cria um novo nó de aluno com o código e nome fornecidos e o insere no início da lista. Ela retorna um ponteiro para o novo nó que agora se torna o novo início da lista.
+Aluno* InserirAluno(Aluno* lista, int codigo, const char* nome): Essa função cria um novo nó de aluno com o código e nome fornecidos e o insere no início da lista. 
+Ela retorna um ponteiro para o novo nó que agora se torna o novo início da lista.
 Função de Listagem de Alunos na Lista Encadeada Simples (lista.h):
 
 void ListarAlunos(Aluno* lista): Essa função imprime na tela os códigos e nomes de todos os alunos presentes na lista.
 Função de Pesquisa de Aluno por Nome na Lista Encadeada Simples (lista.h):
 
-Aluno* PesquisarListaPorNome(Aluno* lista, const char* nome): Essa função procura um aluno na lista com base no nome. Se encontrar um aluno com o nome correspondente, retorna um ponteiro para esse aluno; caso contrário, retorna NULL.
+Aluno* PesquisarListaPorNome(Aluno* lista, const char* nome): Essa função procura um aluno na lista com base no nome. 
+Se encontrar um aluno com o nome correspondente, retorna um ponteiro para esse aluno; caso contrário, retorna NULL.
 Função de Pesquisa de Aluno por Código na Lista Encadeada Simples (lista.h):
 
-Aluno* PesquisarListaPorCodigo(Aluno* lista, int codigo): Essa função procura um aluno na lista com base no código. Se encontrar um aluno com o código correspondente, retorna um ponteiro para esse aluno; caso contrário, retorna NULL.
-As funções e estruturas mencionadas acima são específicas para a lista encadeada simples. O código implementa estruturas e funções semelhantes para os outros tipos de listas (lista circular, lista duplamente encadeada circular e lista duplamente encadeada) em seus respectivos arquivos de cabeçalho e implementações correspondentes. Essas estruturas e funções têm nomes semelhantes com base no tipo de lista a que se referem, como AlunoCircular, AlunoCircularDupla, AlunoDuplamenteEncadeada, etc.
+Aluno* PesquisarListaPorCodigo(Aluno* lista, int codigo): Essa função procura um aluno na lista com base no código. 
+Se encontrar um aluno com o código correspondente, retorna um ponteiro para esse aluno; caso contrário, retorna NULL.
+
+As funções e estruturas mencionadas acima são específicas para a lista encadeada simples. 
+O código implementa estruturas e funções semelhantes para os outros tipos de listas (lista circular, 
+lista duplamente encadeada circular e lista duplamente encadeada) em seus respectivos arquivos de cabeçalho e implementações correspondentes. 
+Essas estruturas e funções têm nomes semelhantes com base no tipo de lista a que se referem, como AlunoCircular, AlunoCircularDupla, AlunoDuplamenteEncadeada, etc.
