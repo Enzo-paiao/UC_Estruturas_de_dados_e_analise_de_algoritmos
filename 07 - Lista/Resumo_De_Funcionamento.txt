@@ -1,0 +1,99 @@
+O código começa com a definição de estruturas e operações básicas de lista encadeada.
+
+Em seguida, há a definição da estrutura Funcionario e funções para manipulação de funcionários, como LerFuncionario, 
+ListarFuncionario, GravarFuncionariosEmArquivo, LerFuncionariosDeArquivo e PesquisarFuncionarioPorCPF.
+
+Além disso, há a definição de funções para manipulação de lista de números inteiros e lista de números reais, como CriarLista, 
+ListaVazia, ListaCheia, Alistar, Desalistar, ImprimeLista, CriarLista_2, ListaVazia_2, ListaCheia_2, Enfileirar_2, 
+Desenfileirar_2, SalvarLista_2, CarregarLista_2 e ImprimirLista_2.
+
+O código também inclui funcionalidades relacionadas a produtos, como listarProdutos_4, buscarProduto_4 e excluirProduto_4.
+
+O programa principal tem um menu com opções para manipulação de diferentes tipos de dados, incluindo lista de números inteiros, 
+lista de números reais, cadastro de funcionários e cadastro de produtos.
+
+Estruturas:
+struct Node:
+
+Descrição: É uma estrutura que representa um nó de uma lista encadeada.
+Campos:
+int data: Armazena o valor do nó.
+struct Node *next: Um ponteiro para o próximo nó na lista.
+Funções relacionadas:
+criarNo(int valor): Cria um novo nó com o valor especificado.
+inserirNoNoFinal(struct Node **list, int valor): Insere um nó no final da lista.
+imprimirLista(struct Node *list): Imprime os elementos da lista.
+retirarNo(struct Node **list, int posicao): Retira um nó de uma posição específica na lista.
+struct Funcionario:
+
+Descrição: Estrutura que armazena informações sobre funcionários, como CPF, nome, endereço, telefone, 
+data de nascimento, data de admissão, departamento, cargo e salário.
+Campos:
+Vários campos de caracteres para armazenar os detalhes do funcionário.
+float salario: Armazena o salário do funcionário.
+lista:
+
+Descrição: Estrutura que representa uma lista de números inteiros.
+Campos:
+elemento vet[TAM]: Um array que armazena os elementos da lista.
+int inicio e int fim: Marcam as posições do início e do fim da lista.
+Funções relacionadas:
+CriarLista(lista *l): Inicializa a lista.
+ListaVazia(lista *l): Verifica se a lista está vazia.
+ListaCheia(lista *l): Verifica se a lista está cheia.
+Alistar(lista *l, elemento e, int pos): Insere um elemento na lista.
+Desalistar(lista *l, int pos): Retira um elemento da lista.
+ImprimeLista(lista *l): Imprime o conteúdo da lista.
+lista_2:
+
+Descrição: Estrutura que representa uma lista de números reais (pode ser usada como uma fila).
+Campos:
+elemento_2 vet_2[MAX_TAM]: Um array que armazena os elementos da lista.
+int inicio_2 e int fim_2: Marcam as posições do início e do fim da lista.
+Funções relacionadas:
+CriarLista_2(lista_2 *l_2): Inicializa a lista.
+ListaVazia_2(lista_2 *l_2): Verifica se a lista está vazia.
+ListaCheia_2(lista_2 *l_2): Verifica se a lista está cheia.
+Enfileirar_2(lista_2 *l_2, elemento_2 e_2): Adiciona um elemento na fila.
+Desenfileirar_2(lista_2 *l_2): Remove e retorna o elemento da frente da fila.
+SalvarLista_2(lista_2 *l_2, const char *nomeArquivo_2): Salva os elementos da lista em um arquivo.
+CarregarLista_2(lista_2 *l_2, const char *nomeArquivo_2): Carrega os elementos da lista de um arquivo.
+ImprimirLista_2(lista_2 *l_2): Imprime o conteúdo da lista.
+Produto_4:
+
+Descrição: Estrutura que representa informações sobre um produto.
+Campos:
+char nomeProduto_4[50]: Nome do produto.
+float precoUnitario_4: Preço unitário do produto.
+int quantidadeEstoque_4: Quantidade em estoque do produto.
+Funções:
+LerFuncionario:
+
+Descrição: Lê as informações de um funcionário do usuário e preenche uma estrutura de funcionário.
+ListarFuncionario:
+
+Descrição: Exibe as informações de um funcionário na saída padrão.
+GravarFuncionariosEmArquivo:
+
+Descrição: Salva registros de funcionários em um arquivo binário.
+LerFuncionariosDeArquivo:
+
+Descrição: Lê registros de funcionários de um arquivo binário.
+PesquisarFuncionarioPorCPF:
+
+Descrição: Pesquisa um funcionário por CPF e exibe suas informações.
+CriarLista:
+
+Descrição: Inicializa uma lista de números inteiros.
+CriarLista_2:
+
+Descrição: Inicializa uma lista de números reais (fila).
+listarProdutos_4:
+
+Descrição: Exibe a lista de produtos cadastrados.
+buscarProduto_4:
+
+Descrição: Busca um produto pelo nome na lista de produtos.
+excluirProduto_4:
+
+Descrição: Remove um produto da lista de produtos.
