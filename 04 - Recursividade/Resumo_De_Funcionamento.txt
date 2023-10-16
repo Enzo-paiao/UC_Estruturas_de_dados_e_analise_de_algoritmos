@@ -1,0 +1,23 @@
+Este programa em C permite ao usuário escolher entre duas operações:
+
+Calcular uma potência:
+
+O programa pede ao usuário que insira a base e o expoente (números inteiros).
+Verifica se o expoente é um número inteiro não negativo.
+Chama a função calcularPotencia para calcular a potência da base elevada ao expoente.
+Exibe o resultado no formato "base elevada ao expoente é igual a resultado".
+Calcular a soma dos primeiros n números naturais:
+
+O programa pede ao usuário que insira um valor n.
+Verifica se n é maior ou igual a 1 (pois a soma dos números naturais começa em 1).
+Chama a função somaNaturais para calcular a soma dos primeiros n números naturais.
+Exibe o resultado no formato "A soma dos primeiros n números naturais é igual a resultado".
+Opção inválida:
+
+Se o usuário escolher uma opção que não seja 1 ou 2, o programa exibe "Opção inválida".
+Funções definidas no programa:
+
+somaNaturais(int n): Calcula a soma dos primeiros n números naturais utilizando uma abordagem recursiva.
+calcularPotencia(int base, int expoente): Calcula a potência da base elevada ao expoente usando uma abordagem recursiva.
+O programa garante que as entradas do usuário sejam válidas para cada operação e fornece resultados precisos com base nas operações selecionadas. 
+Caso o usuário insira um valor inválido, o programa fornecerá uma mensagem de erro correspondente.
