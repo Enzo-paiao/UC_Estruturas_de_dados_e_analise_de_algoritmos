@@ -1,0 +1,104 @@
+Este é um programa em C que oferece várias opções para operar com diferentes tipos de pilhas. Cada opção realiza uma operação diferente. 
+Aqui está uma visão geral do que cada opção faz:
+
+Pilha topo - 1:
+
+Permite ao usuário empilhar números inteiros.
+O programa pede que o usuário insira números inteiros até a pilha ficar cheia.
+Em seguida, ele desempilha e exibe os números na ordem em que foram inseridos.
+Pilha 10 números:
+
+Permite ao usuário empilhar 10 números reais (números de ponto flutuante).
+Os números são empilhados em uma pilha e, em seguida, desempilhados e gravados em um arquivo chamado "pilha.txt".
+Posteriormente, o programa lê os números do arquivo e os empilha novamente, exibindo-os.
+Pilha Funcionários:
+
+Permite ao usuário empilhar informações de funcionários, incluindo CPF, nome, endereço, telefone de contato, data de nascimento, data de admissão, departamento, cargo e salário.
+Os dados dos funcionários são empilhados em uma pilha de tamanho fixo (TAM_p3).
+O usuário pode optar por gravar os funcionários empilhados em um arquivo binário chamado "funcionarios.bin".
+O usuário também pode optar por ler os funcionários do arquivo e imprimi-los na tela.
+Pilha Circular:
+
+Cria uma pilha circular que pode armazenar até MAX_TAM elementos (definido como 3 no código).
+Empilha os caracteres "GFEDCBA" na pilha circular e imprime o conteúdo da pilha.
+Em seguida, desempilha dois elementos da pilha circular e imprime o conteúdo atualizado da pilha.
+Conversão para binário:
+
+O programa solicita ao usuário que insira um número inteiro.
+Em seguida, ele converte esse número em sua representação binária e o armazena em uma pilha até que o número seja zero.
+A pilha é usada para armazenar os bits na ordem correta.
+Em seguida, ele imprime a representação binária do número.
+Cada opção realiza uma tarefa específica e é controlada pelo usuário com base na escolha do programa. 
+
+Funções:
+
+CreatePile(pilha *ppp):
+
+Cria uma pilha vazia e a inicializa com topo igual a -1.
+EmptyPile(pilha *ppp):
+
+Verifica se a pilha está vazia, retornando 1 (VERDADEIRO) se o topo for igual a -1 e 0 (FALSO) caso contrário.
+Fullpile(pilha *ppp):
+
+Verifica se a pilha está cheia, retornando 1 (VERDADEIRO) se o topo for igual ao tamanho máximo da pilha e 0 (FALSO) caso contrário.
+Mount(pilha *ppp, elment e):
+
+Insere um elemento inteiro e na pilha ppp se a pilha não estiver cheia.
+Unmount(pilha *ppp):
+
+Retira o elemento do topo da pilha ppp e retorna esse elemento se a pilha não estiver vazia.
+Printpile(pilha *ppp):
+
+Imprime o conteúdo da pilha ppp se não estiver vazia.
+CriarPilha_P2(pilha_P2 *p_P2):
+
+Cria uma pilha de números reais p_P2.
+PilhaVazia_P2(pilha_P2 *p_P2):
+
+Verifica se a pilha de números reais p_P2 está vazia.
+PilhaCheia_P2(pilha_P2 *p_P2):
+
+Verifica se a pilha de números reais p_P2 está cheia.
+Empilhar_P2(pilha_P2 *p_P2, elemento_P2 e_P2):
+
+Empilha um elemento de números reais e_P2 na pilha p_P2.
+Desempilhar_P2(pilha_P2 *p_P2):
+Desempilha um elemento de números reais da pilha p_P2 e retorna esse elemento.
+CriarPilhaFuncionarios(PilhaFuncionarios_p3 *p_p3):
+Inicializa uma pilha de funcionários p_p3.
+PilhaFuncionariosVazia(PilhaFuncionarios_p3 *p_p3):
+Verifica se a pilha de funcionários p_p3 está vazia.
+PilhaFuncionariosCheia(PilhaFuncionarios_p3 *p_p3):
+Verifica se a pilha de funcionários p_p3 está cheia.
+EmpilharFuncionario(PilhaFuncionarios_p3 *p_p3, Funcionario_p3 f_p3):
+Empilha um funcionário f_p3 na pilha de funcionários p_p3.
+DesempilharFuncionario(PilhaFuncionarios_p3 *p_p3):
+Desempilha um funcionário da pilha de funcionários p_p3 e retorna esse funcionário.
+GravarFuncionariosEmArquivo(PilhaFuncionarios_p3 *p_p3, const char *nomeArquivo_p3):
+Grava os funcionários empilhados na pilha p_p3 em um arquivo binário com o nome especificado.
+LerFuncionariosDeArquivo(PilhaFuncionarios_p3 *p_p3, const char *nomeArquivo_p3):
+Lê funcionários de um arquivo binário com o nome especificado e empilha esses funcionários na pilha p_p3.
+ImprimirFuncionarios(PilhaFuncionarios_p3 *p_p3):
+Imprime os funcionários empilhados na pilha p_p3.
+CriarPilha():
+Cria uma pilha circular e a inicializa com os campos necessários.
+PilhaVazia(PilhaCircular *pilha):
+Verifica se a pilha circular pilha está vazia.
+PilhaCheia(PilhaCircular *pilha):
+Verifica se a pilha circular pilha está cheia.
+Empilhar(PilhaCircular *pilha, int elemento):
+Empilha um elemento na pilha circular pilha.
+Desempilhar(PilhaCircular *pilha):
+Desempilha um elemento da pilha circular pilha.
+CP(PILHAS *battery):
+Inicializa uma pilha para a conversão de números binários.
+PV(PILHAS *battery):
+Verifica se a pilha de conversão de números binários está vazia.
+PC(PILHAS *battery):
+Verifica se a pilha de conversão de números binários está cheia.
+Empr(PILHAS *battery, elemento e):
+Insere um elemento na pilha de conversão de números binários.
+Dsep(PILHAS *battery):
+Retira um elemento da pilha de conversão de números binários.
+Estas são as funções usadas no programa para executar várias operações com diferentes tipos de pilhas e estruturas de dados. 
+Cada função desempenha um papel específico na manipulação das pilhas e na realização das operações desejadas.
