@@ -1,4 +1,6 @@
-Esse código implementa diferentes tipos de listas encadeadas em C, incluindo lista encadeada simples, lista encadeada circular, lista duplamente encadeada circular e lista duplamente encadeada. Cada tipo de lista é implementado em um arquivo de cabeçalho separado e definido em arquivos de implementação correspondentes. Aqui está uma visão geral das funcionalidades implementadas:
+Esse código implementa diferentes tipos de listas encadeadas em C, incluindo lista encadeada simples, lista encadeada circular, 
+lista duplamente encadeada circular e lista duplamente encadeada. 
+Cada tipo de lista é implementado em um arquivo de cabeçalho separado e definido em arquivos de implementação correspondentes. Aqui está uma visão geral das funcionalidades implementadas:
 
 Lista Encadeada Simples:
 
