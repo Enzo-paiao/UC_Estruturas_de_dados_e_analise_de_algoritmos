@@ -1,25 +1,49 @@
-Este programa em C apresenta três estruturas de dados e permite ao usuário selecionar uma das opções para executar operações específicas. 
-O programa é dividido em três seções principais, cada uma correspondendo a uma estrutura de dados diferente.
 
-Array de múltiplos:
+Este código em C demonstra a alocação dinâmica de memória para diferentes tipos de estruturas e a manipulação de vetores. Aqui estão as principais partes do código:
 
-O programa permite ao usuário inserir o tamanho do array.
-Em seguida, ele aloca dinamicamente memória para o array usando calloc.
-Popula o array com múltiplos de 10.
-Finalmente, o array é impresso e a memória é liberada.
-Código Pessoa:
+Definição das Estruturas Pessoa e Veiculo:
 
-O programa solicita ao usuário que insira o tamanho do vetor de pessoas.
-Em seguida, a função alocarPessoa aloca dinamicamente memória para o vetor de pessoas.
-A função preencherPessoa permite que o usuário preencha os detalhes de cada pessoa no vetor.
-A função imprimirPessoa imprime os detalhes de cada pessoa no vetor.
-A memória alocada é liberada após a conclusão das operações.
-Código Veiculo:
+As estruturas Pessoa e Veiculo são definidas para armazenar informações sobre pessoas e veículos. Cada estrutura tem campos que representam características específicas desses objetos.
 
-O programa pede ao usuário que insira o tamanho do vetor de veículos.
-A função alocarVeiculo aloca dinamicamente memória para o vetor de veículos.
-A função preencherVeiculo preenche os detalhes de cada veículo no vetor automaticamente.
-A função imprimirVeiculo imprime os detalhes de cada veículo no vetor.
-A memória alocada é liberada após a conclusão das operações.
-O programa verifica se a alocação de memória foi bem-sucedida e se o tamanho do vetor ou array é válido. 
-Se alguma das verificações falhar, o programa exibirá mensagens de erro apropriadas.
+Função alocarPessoa(int n):
+
+Essa função aloca dinamicamente memória para um vetor de Pessoa. A função malloc é usada para alocar espaço suficiente para n elementos da estrutura Pessoa. Em caso de falha na alocação, a função exibe uma mensagem de erro e encerra o programa.
+
+Função preencherPessoa(struct Pessoa *pessoas, int n):
+
+Esta função preenche o vetor de Pessoa com dados inseridos pelo usuário. Ela solicita o CPF, nome e salário de cada pessoa, armazenando essas informações nos campos das estruturas dentro do vetor.
+
+Função imprimirPessoa(const struct Pessoa *pessoas, int n):
+
+Essa função imprime os detalhes de todas as pessoas armazenadas no vetor de Pessoa. Ela percorre o vetor e imprime os valores do CPF, nome e salário de cada pessoa.
+
+Função alocarVeiculo(int n):
+
+Essa função é semelhante à alocarPessoa, mas aloca memória para um vetor de Veiculo. Ele também lida com possíveis falhas na alocação de memória.
+
+Função preencherVeiculo(struct Veiculo *veiculos, int n):
+
+Esta função preenche o vetor de Veiculo com dados fictícios. Ela gera dados para campos como chassi, marca, modelo e preço automaticamente, simulando veículos diferentes.
+
+Função imprimirVeiculo(const struct Veiculo *veiculos, int n):
+
+Essa função é semelhante a imprimirPessoa e imprime detalhes sobre os veículos armazenados no vetor de Veiculo.
+
+Função alocarMemoria(int n):
+
+Esta função é uma função genérica para alocar memória para um vetor de inteiros. Ela aloca espaço para n inteiros e lida com erros de alocação de memória da mesma forma que as funções alocarPessoa e alocarVeiculo.
+
+Função preencherVetor(int *array, int n):
+
+Preenche o vetor de inteiros com valores de índice multiplicados por 10. Isso cria uma sequência simples de valores no vetor.
+
+Função imprimirVetor(int *array, int n):
+
+Imprime o vetor de inteiros preenchido pela função anterior.
+
+Função main():
+
+Inicialmente, o programa solicita que o usuário escolha entre três opções: criar um vetor de inteiros, um vetor de Pessoa ou um vetor de Veiculo.
+Dependendo da escolha, o programa entra na seção relevante e permite ao usuário especificar o tamanho do vetor. Em seguida, ele aloca memória para o vetor apropriado, preenche-o e imprime seus conteúdos.
+O programa lida com entradas inválidas ou erros de alocação e libera a memória alocada antes de encerrar.
+Este código demonstra o conceito de alocação dinâmica de memória em C e como usá-lo para criar e manipular vetores de estruturas diferentes.
