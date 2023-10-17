@@ -1,81 +1,85 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-struct Pessoa {
-  char cpf[12];
-  char nome[100];
+typedef struct Pessoa {
+  long int CPF;
+  char nome[50];
   float salario;
-};
+} Pessoa;
 
-struct Pessoa *alocarPessoa(int n) {
-  struct Pessoa *pessoas = (struct Pessoa *)malloc(n * sizeof(struct Pessoa));
-  if (pessoas == NULL) {
+Pessoa *alocarMemoriaPessoa(int n) {
+  Pessoa *array = (Pessoa *)calloc(n, sizeof(Pessoa));
+  if (array == NULL) {
     printf("Falha na alocação de memória para Pessoa.\n");
     exit(1);
   }
-  return pessoas;
+  return array;
 }
 
-void preencherPessoa(struct Pessoa *pessoas, int n) {
+void preencherVetorPessoa(Pessoa *array, int n) {
   for (int i = 0; i < n; i++) {
-    printf("Digite o CPF da pessoa %d: ", i + 1);
-    scanf("%s", pessoas[i].cpf);
-
-    printf("Digite o nome da pessoa %d: ", i + 1);
-    scanf(" %[^\n]s", pessoas[i].nome);
-
-    printf("Digite o salário da pessoa %d: ", i + 1);
-    scanf("%f", &pessoas[i].salario);
+    array[i].CPF = 1234567890 + i;
+    sprintf(array[i].nome, "Pessoa%d", i);
+    array[i].salario = 1000.0 + i * 100;
   }
 }
 
-void imprimirPessoa(const struct Pessoa *pessoas, int n) {
-  printf("Vetor de Pessoas:\n");
+void imprimirVetorPessoa(Pessoa *array, int n) {
+  printf("Pessoas: \n");
   for (int i = 0; i < n; i++) {
-    printf("Pessoa %d:\n", i + 1);
-    printf("CPF: %s\n", pessoas[i].cpf);
-    printf("Nome: %s\n", pessoas[i].nome);
-    printf("Salário: %.2f\n", pessoas[i].salario);
+    printf("Pessoa %d\n", i + 1);
+    printf("CPF: %ld\n", array[i].CPF);
+    printf("Nome: %s\n", array[i].nome);
+    printf("Salário: %.2f\n", array[i].salario);
     printf("\n");
   }
 }
 
-struct Veiculo {
-  char chassi[20];
+typedef struct Veiculo {
+  long int chassi;
   char marca[50];
   char modelo[50];
   float preco;
-};
+} Veiculo;
 
-struct Veiculo *alocarVeiculo(int n) {
-  struct Veiculo *veiculos =
-      (struct Veiculo *)malloc(n * sizeof(struct Veiculo));
-  if (veiculos == NULL) {
-    printf("Falha na alocação de memória para Veiculo.\n");
+Veiculo *alocarMemoriaVeiculo(int n) {
+  Veiculo *array = (Veiculo *)malloc(n * sizeof(Veiculo));
+  if (array == NULL) {
+    printf("Falha na alocação de memória para Veículo.\n");
     exit(1);
   }
-  return veiculos;
+  return array;
 }
 
-void preencherVeiculo(struct Veiculo *veiculos, int n) {
+void preencherVetorVeiculo(Veiculo *array, int n) {
   for (int i = 0; i < n; i++) {
-    sprintf(veiculos[i].chassi, "Chassi-%d", i + 1);
-    sprintf(veiculos[i].marca, "Marca-%d", i + 1);
-    sprintf(veiculos[i].modelo, "Modelo-%d", i + 1);
-    veiculos[i].preco = (i + 1) * 10000.0;
+    array[i].chassi = 1000000 + i;
+    sprintf(array[i].marca, "Marca%d", i);
+    sprintf(array[i].modelo, "Modelo%d", i);
+    array[i].preco = 10000.0 + i * 1000;
   }
 }
 
-void imprimirVeiculo(const struct Veiculo *veiculos, int n) {
-  printf("Vetor de Veículos:\n");
+void imprimirVetorVeiculo(Veiculo *array, int n) {
+  printf("Veículos: \n");
   for (int i = 0; i < n; i++) {
-    printf("Veículo %d:\n", i + 1);
-    printf("Chassi: %s\n", veiculos[i].chassi);
-    printf("Marca: %s\n", veiculos[i].marca);
-    printf("Modelo: %s\n", veiculos[i].modelo);
-    printf("Preço: %.2f\n", veiculos[i].preco);
+    printf("Veículo %d\n", i + 1);
+    printf("Chassi: %ld\n", array[i].chassi);
+    printf("Marca: %s\n", array[i].marca);
+    printf("Modelo: %s\n", array[i].modelo);
+    printf("Preço: %.2f\n", array[i].preco);
     printf("\n");
   }
+}
+
+Veiculo *realocarMemoriaVeiculo(Veiculo *array, int *n, int novo_tamanho) {
+  array = (Veiculo *)realloc(array, novo_tamanho * sizeof(Veiculo));
+  if (array == NULL) {
+    printf("Falha na realocação de memória para Veículo.\n");
+    exit(1);
+  }
+  *n = novo_tamanho;
+  return array;
 }
 
 int *alocarMemoria(int n) {
@@ -125,26 +129,31 @@ int main() {
     // Liberar a memória alocada com malloc
     free(array);
   } else if (escolha == 2) {
-    printf("Digite o tamanho do vetor de Pessoas: ");
+    Pessoa *pessoas;
+    int n;
+    printf("Digite o número de pessoas: ");
     scanf("%d", &n);
-    if (n <= 0) {
-      printf("Tamanho do vetor de Pessoas inválido.\n");
-      return 1;
-    }
-    struct Pessoa *pessoas = alocarPessoa(n);
-    preencherPessoa(pessoas, n);
-    imprimirPessoa(pessoas, n);
+
+    pessoas = alocarMemoriaPessoa(n);
+    preencherVetorPessoa(pessoas, n);
+    imprimirVetorPessoa(pessoas, n);
+
     free(pessoas);
   } else if (escolha == 3) {
-    printf("Digite o tamanho do vetor de Veiculos: ");
+    Veiculo *veiculos;
+    int n;
+    printf("Digite o tamanho inicial do array: ");
     scanf("%d", &n);
-    if (n <= 0) {
-      printf("Tamanho do vetor de Veiculos inválido.\n");
-      return 1;
-    }
-    struct Veiculo *veiculos = alocarVeiculo(n);
-    preencherVeiculo(veiculos, n);
-    imprimirVeiculo(veiculos, n);
+
+    veiculos = alocarMemoriaVeiculo(n);
+    preencherVetorVeiculo(veiculos, n);
+    imprimirVetorVeiculo(veiculos, n);
+    printf("Após realocar: ");
+    int novo_tamanho = n + 5;
+    veiculos = realocarMemoriaVeiculo(veiculos, &n, novo_tamanho);
+    preencherVetorVeiculo(veiculos + n - 5, 5);
+    imprimirVetorVeiculo(veiculos, novo_tamanho);
+
     free(veiculos);
   } else {
     printf("Opção inválida.\n");
