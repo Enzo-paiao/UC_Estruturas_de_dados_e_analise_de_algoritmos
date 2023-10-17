@@ -1,49 +1,54 @@
+Este código em C é uma demonstração da alocação dinâmica de memória e manipulação de estruturas de dados usando alocação dinâmica. 
+Ele inclui três partes principais: um exemplo de alocação dinâmica de um array de inteiros, uma estrutura de dados "Pessoa" e uma estrutura de dados "Veiculo".
 
-Este código em C demonstra a alocação dinâmica de memória para diferentes tipos de estruturas e a manipulação de vetores. Aqui estão as principais partes do código:
+Estrutura Pessoa:
 
-Definição das Estruturas Pessoa e Veiculo:
+A estrutura Pessoa é definida para representar informações sobre pessoas, contendo os campos:
 
-As estruturas Pessoa e Veiculo são definidas para armazenar informações sobre pessoas e veículos. Cada estrutura tem campos que representam características específicas desses objetos.
+long int CPF: armazena o CPF da pessoa.
+char nome[50]: armazena o nome da pessoa.
+float salario: armazena o salário da pessoa.
+Funções alocarMemoriaPessoa e preencherVetorPessoa:
 
-Função alocarPessoa(int n):
+alocarMemoriaPessoa aloca dinamicamente memória para um array de estruturas Pessoa e retorna um ponteiro para o início do array. 
+A função verifica se a alocação de memória foi bem-sucedida.
+preencherVetorPessoa preenche o array de estruturas Pessoa com dados de exemplo.
+Funções imprimirVetorPessoa:
 
-Essa função aloca dinamicamente memória para um vetor de Pessoa. A função malloc é usada para alocar espaço suficiente para n elementos da estrutura Pessoa. Em caso de falha na alocação, a função exibe uma mensagem de erro e encerra o programa.
+imprimirVetorPessoa imprime os detalhes das pessoas presentes no array de Pessoa.
+Estrutura Veiculo:
 
-Função preencherPessoa(struct Pessoa *pessoas, int n):
+A estrutura Veiculo é definida para representar informações sobre veículos, contendo os campos:
 
-Esta função preenche o vetor de Pessoa com dados inseridos pelo usuário. Ela solicita o CPF, nome e salário de cada pessoa, armazenando essas informações nos campos das estruturas dentro do vetor.
+long int chassi: armazena o número de chassi do veículo.
+char marca[50]: armazena a marca do veículo.
+char modelo[50]: armazena o modelo do veículo.
+float preco: armazena o preço do veículo.
+Funções alocarMemoriaVeiculo, preencherVetorVeiculo e realocarMemoriaVeiculo:
 
-Função imprimirPessoa(const struct Pessoa *pessoas, int n):
+alocarMemoriaVeiculo aloca dinamicamente memória para um array de estruturas Veiculo e retorna um ponteiro para o início do array. 
+A função verifica se a alocação de memória foi bem-sucedida.
+preencherVetorVeiculo preenche o array de estruturas Veiculo com dados de exemplo.
+realocarMemoriaVeiculo realoca dinamicamente a memória para o array de Veiculo com um novo tamanho especificado.
+Função alocarMemoria:
 
-Essa função imprime os detalhes de todas as pessoas armazenadas no vetor de Pessoa. Ela percorre o vetor e imprime os valores do CPF, nome e salário de cada pessoa.
+A função alocarMemoria é usada para alocar dinamicamente memória para um array de inteiros e retorna um ponteiro para o início do array. 
+A função verifica se a alocação de memória foi bem-sucedida.
 
-Função alocarVeiculo(int n):
+Funções preencherVetor e imprimirVetor:
 
-Essa função é semelhante à alocarPessoa, mas aloca memória para um vetor de Veiculo. Ele também lida com possíveis falhas na alocação de memória.
+preencherVetor preenche o array de inteiros com valores de exemplo.
+imprimirVetor imprime os elementos do array de inteiros.
+Função main:
 
-Função preencherVeiculo(struct Veiculo *veiculos, int n):
+O programa principal permite ao usuário escolher entre três opções: criar um array de inteiros, criar um array de estruturas "Pessoa" ou criar um array de estruturas "Veiculo".
+Com base na escolha do usuário, o programa alocará memória, preencherá os dados e imprimirá os detalhes desses arrays.
+Há também um exemplo de realocação de memória para o array de "Veiculo".
+Liberação de Memória:
 
-Esta função preenche o vetor de Veiculo com dados fictícios. Ela gera dados para campos como chassi, marca, modelo e preço automaticamente, simulando veículos diferentes.
+O programa libera a memória alocada dinamicamente com a função free no final de cada caso, evitando vazamentos de memória.
 
-Função imprimirVeiculo(const struct Veiculo *veiculos, int n):
-
-Essa função é semelhante a imprimirPessoa e imprime detalhes sobre os veículos armazenados no vetor de Veiculo.
-
-Função alocarMemoria(int n):
-
-Esta função é uma função genérica para alocar memória para um vetor de inteiros. Ela aloca espaço para n inteiros e lida com erros de alocação de memória da mesma forma que as funções alocarPessoa e alocarVeiculo.
-
-Função preencherVetor(int *array, int n):
-
-Preenche o vetor de inteiros com valores de índice multiplicados por 10. Isso cria uma sequência simples de valores no vetor.
-
-Função imprimirVetor(int *array, int n):
-
-Imprime o vetor de inteiros preenchido pela função anterior.
-
-Função main():
-
-Inicialmente, o programa solicita que o usuário escolha entre três opções: criar um vetor de inteiros, um vetor de Pessoa ou um vetor de Veiculo.
-Dependendo da escolha, o programa entra na seção relevante e permite ao usuário especificar o tamanho do vetor. Em seguida, ele aloca memória para o vetor apropriado, preenche-o e imprime seus conteúdos.
-O programa lida com entradas inválidas ou erros de alocação e libera a memória alocada antes de encerrar.
-Este código demonstra o conceito de alocação dinâmica de memória em C e como usá-lo para criar e manipular vetores de estruturas diferentes.
+No geral, este código demonstra a alocação dinâmica de memória e manipulação de estruturas de dados, 
+juntamente com a importância de liberar a memória alocada para evitar vazamentos de memória. 
+Cada parte do código lida com um tipo diferente de estrutura de dados, como inteiros, "Pessoa" e "Veiculo",
+mostrando como a alocação dinâmica pode ser usada em várias situações.
