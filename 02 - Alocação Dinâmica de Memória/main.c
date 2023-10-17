@@ -78,6 +78,32 @@ void imprimirVeiculo(const struct Veiculo *veiculos, int n) {
   }
 }
 
+int *alocarMemoria(int n) {
+  // Alocação dinâmica de memória usando malloc
+  int *array = (int *)malloc(n * sizeof(int));
+  if (array == NULL) {
+    printf("Falha na alocação de memória.\n");
+    exit(1);
+  }
+  return array;
+}
+
+void preencherVetor(int *array, int n) {
+  // Preencher o array
+  for (int i = 0; i < n; i++) {
+    array[i] = i * 10;
+  }
+}
+
+void imprimirVetor(int *array, int n) {
+  // Imprimir o array
+  printf("Array: ");
+  for (int i = 0; i < n; i++) {
+    printf("%d ", array[i]);
+  }
+  printf("\n");
+}
+
 int main() {
   int escolha, n;
 
@@ -88,25 +114,15 @@ int main() {
   scanf("%d", &escolha);
 
   if (escolha == 1) {
-
-    int *array;
+    int *array, n;
     printf("Digite o tamanho do array: ");
     scanf("%d", &n);
-    if (n <= 0) {
-      printf("Tamanho do array inválido.\n");
-      return 1;
-    }
-    array = (int *)calloc(n, sizeof(int));
-    if (array == NULL) {
-      printf("Falha na alocação de memória.\n");
-      return 1;
-    }
-    printf("Array: ");
-    for (int i = 0; i < n; i++) {
-      array[i] = i * 10;
-      printf("%d ", array[i]);
-    }
-    printf("\n");
+
+    array = alocarMemoria(n); // Função para alocação de memória
+    preencherVetor(array, n); // Função para preenchimento do vetor
+    imprimirVetor(array, n);  // Função para impressão do vetor
+
+    // Liberar a memória alocada com malloc
     free(array);
   } else if (escolha == 2) {
     printf("Digite o tamanho do vetor de Pessoas: ");
