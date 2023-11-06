@@ -1,124 +1,118 @@
-#include "Floresta.h"
 #include <stdio.h>
 #include <stdlib.h>
-
-// Função para imprimir a árvore de forma gráfica com os nós à esquerda
-void printTreeGraphically(Node* root, int space) {
-    // Caso base
-    if (root == NULL)
-        return;
-
-    // Incremento de espaço entre níveis
-    space += 5;
-
-    // Processa a subárvore esquerda
-    printTreeGraphically(root->left, space);
-
-    // Imprime o nó atual após o espaço
-    printf("\n");
-    for (int i = 5; i < space; i++)
-        printf(" ");
-    printf("%d\n", root->key);
-
-    // Processa o nó da subárvore direita
-    printTreeGraphically(root->right, space);
-}
+#include <string.h>
+#include "Floresta.h"
 
 int main() {
-  // Declaração de um array de ponteiros para árvores (forest) para três
-  // categorias diferentes.
-  Node *forest[3]; // Crie três árvores para três categorias diferentes
+  int escolha;
+  char nomeCategoria[20];
+  int categoriaEscolhida = 0;
+  Registro reg;
+  Categoria *categoriaAtual = NULL;
 
-  // Inicializa todas as árvores como vazias (NULL).
-  for (int i = 0; i < 3; i++) {
-    forest[i] = NULL;
-  }
-
-  // Loop principal para o menu de opções.
   while (1) {
-    printf("\nOpções:\n");
-    printf("1. Inserir na árvore\n");
-    printf("2. Pesquisar na árvore\n");
-    printf("3. Excluir da árvore\n");
-    printf("4. Caminhamento Pré-Ordem\n");
-    printf("5. Caminhamento Em-Ordem\n");
-    printf("6. Caminhamento Pós-Ordem\n");
-    printf("7. Sair\n");
-    printf("8. Ver em gráfico\n");
+    printf("\nOperações:\n");
+    printf("1 - Inserir categoria\n");
+    printf("2 - Escolher categoria\n");
+    printf("3 - Inserir registro na categoria\n");
+    printf("4 - Pesquisar registro na categoria\n");
+    printf("5 - Excluir registro na categoria\n");
+    printf("6 - Imprimir categoria em ordem\n");
+    printf("7 - Imprimir categoria pré-ordem\n");
+    printf("8 - Imprimir categoria pós-ordem\n");
+    printf("9 - Imprimir representação visual da árvore\n");
+    printf("10 - Sair\n");
+
     printf("Escolha uma opção: ");
+    scanf("%d", &escolha);
 
-    int choice;
-    scanf("%d", &choice);
+    if (escolha == 1) {
+      printf("Digite o nome da categoria a ser inserida: ");
+      scanf("%s", nomeCategoria);
+      InserirCategoria(nomeCategoria);
+      printf("Categoria inserida.\n");
+    } else if (escolha == 2) {
+      printf("Escolha a categoria (0 para a primeira): ");
+      scanf("%d", &categoriaEscolhida);
 
-    if (choice == 7) {
-      break; // Encerra o programa quando a opção 7 (Sair) é escolhida.
-    }
-
-    int category;
-    printf("Escolha uma categoria (0, 1, ou 2): ");
-    scanf("%d", &category);
-
-    if (category < 0 || category >= 3) {
-      printf("Categoria inválida.\n");
-      continue; // Volta para o início do loop se a categoria for inválida.
-    }
-
-    int key;
-    Node *result;
-
-    switch (choice) {
-    case 1:
-      // Inserir na árvore
-      printf("Digite o valor a ser inserido: ");
-      scanf("%d", &key);
-      forest[category] = insert(forest[category], key);
-      printf("Valor inserido com sucesso.\n");
-      break;
-    case 2:
-      // Pesquisar na árvore
-      printf("Digite o valor a ser pesquisado: ");
-      scanf("%d", &key);
-      result = search(forest[category], key);
-      if (result != NULL) {
-        printf("Valor encontrado na árvore.\n");
-      } else {
-        printf("Valor não encontrado na árvore.\n");
+      Categoria *tempCategoria = floresta;
+      for (int i = 0; i < categoriaEscolhida; i++) {
+        if (tempCategoria == NULL) {
+          printf("Categoria não encontrada.\n");
+          break;
+        }
+        tempCategoria = tempCategoria->proxima;
       }
-      break;
-    case 3:
-      // Excluir da árvore
-      printf("Digite o valor a ser excluído: ");
-      scanf("%d", &key);
-      forest[category] = deleteNode(forest[category], key);
-      printf("Valor excluído com sucesso.\n");
-      break;
-    case 4:
-      printf("Caminhamento Pré-Ordem: ");
-      preorder(forest[category]);
+
+      if (tempCategoria != NULL) {
+        categoriaAtual = tempCategoria;
+        printf("Categoria escolhida: %s\n", categoriaAtual->nome);
+      } else {
+        printf("Categoria não encontrada.\n");
+      }
+    } else if (escolha == 3) {
+      if (categoriaAtual == NULL) {
+        printf("Escolha uma categoria primeiro.\n");
+        continue;
+      }
+      printf("Digite o valor do registro a ser inserido: ");
+      scanf("%d", &reg.Chave);
+      InserirNaCategoria(reg, categoriaAtual);
+      printf("Registro inserido na categoria.\n");
+    } else if (escolha == 4) {
+      if (categoriaAtual == NULL) {
+        printf("Escolha uma categoria primeiro.\n");
+        continue;
+      }
+      printf("Digite o valor do registro a ser pesquisado: ");
+      scanf("%d", &reg.Chave);
+      PesquisarNaCategoria(&reg, categoriaAtual);
+      printf("Resultado da pesquisa: %d\n", reg.Chave);
+    } else if (escolha == 5) {
+      if (categoriaAtual == NULL) {
+        printf("Escolha uma categoria primeiro.\n");
+        continue;
+      }
+      printf("Digite o valor do registro a ser excluído: ");
+      scanf("%d", &reg.Chave);
+      ExcluirDaCategoria(reg, categoriaAtual);
+      printf("Registro excluído da categoria.\n");
+    } else if (escolha == 6) {
+      if (categoriaAtual == NULL) {
+        printf("Escolha uma categoria primeiro.\n");
+        continue;
+      }
+      printf("Categoria em ordem: ");
+      EmOrdemCategoria(categoriaAtual);
       printf("\n");
-      break;
-    case 5:
-      printf("Caminhamento Em-Ordem: ");
-      inorder(forest[category]);
+    } else if (escolha == 7) {
+      if (categoriaAtual == NULL) {
+        printf("Escolha uma categoria primeiro.\n");
+        continue;
+      }
+      printf("Categoria pré-ordem: ");
+      PreOrdemCategoria(categoriaAtual);
       printf("\n");
-      break;
-    case 6:
-      printf("Caminhamento Pós-Ordem: ");
-      postorder(forest[category]);
+    } else if (escolha == 8) {
+      if (categoriaAtual == NULL) {
+        printf("Escolha uma categoria primeiro.\n");
+        continue;
+      }
+      printf("Categoria pós-ordem: ");
+      PosOrdemCategoria(categoriaAtual);
       printf("\n");
+    } else if (escolha == 9) {
+      if (categoriaAtual == NULL) {
+        printf("Escolha uma categoria primeiro.\n");
+        continue;
+      }
+      printf("Representação visual da árvore:\n");
+      ImprimirArvore(categoriaAtual->arvore, 0);
+    } else if (escolha == 10) {
       break;
-    case 8:
-      printf("Visualização Gráfica da Árvore:\n");
-      printTreeGraphically(forest[category], 0);
-      break;
-    default:
+    } else {
       printf("Opção inválida. Tente novamente.\n");
     }
-  }
-
-  // Liberar memória antes de sair
-  for (int i = 0; i < 3; i++) {
-    freeTree(forest[i]);
   }
 
   return 0;

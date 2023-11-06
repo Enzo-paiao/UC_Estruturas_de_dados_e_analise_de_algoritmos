@@ -1,149 +1,173 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
-typedef struct Node {
-  int key;
-  struct Node *left;
-  struct Node *right;
-} Node;
+typedef int TipoChave;
 
-// Função para criar um novo nó com a chave fornecida
-Node *createNode(int key) {
-  Node *newNode = (Node *)malloc(sizeof(Node));
-  if (newNode == NULL) {
-    printf("Memory allocation failed"); // Se a alocação de memória falhar,
-                                        // exibe uma mensagem de erro.
-    exit(1);
+typedef struct {
+  TipoChave Chave;
+  /* Outros componentes. */
+} Registro;
+
+typedef struct Nodo_str *Apontador;
+
+typedef struct Nodo_str {
+  Registro Reg;
+  Apontador Esq, Dir;
+} Nodo;
+
+typedef Apontador TipoDicionario;
+
+void Inicia(TipoDicionario *Dicionario) { *Dicionario = NULL; }
+
+void Insere(Registro x, Apontador *p) {
+  if (*p == NULL) {
+    *p = (Apontador)malloc(sizeof(Nodo));
+    (*p)->Reg = x;
+    (*p)->Esq = NULL;
+    (*p)->Dir = NULL;
+    return;
   }
-  newNode->key = key;
-  newNode->left = NULL;
-  newNode->right = NULL;
-  return newNode;
-}
-
-Node *insert(Node *root, int key) {
-  if (root == NULL) {
-    return createNode(key);
-  }
-
-  static int childSelector =
-      0; // Variável para alternar entre os dois filhos de um nó pai
-
-  if (key < root->key) {
-    if (root->left == NULL) {
-      root->left = createNode(key);
-    } else {
-      if (childSelector == 0) {
-        root->left->left = insert(root->left->left, key);
-        childSelector = 1;
-      } else {
-        root->left->right = insert(root->left->right, key);
-        childSelector = 0;
-      }
-    }
-  } else if (key > root->key) {
-    if (root->right == NULL) {
-      root->right = createNode(key);
-    } else {
-      if (childSelector == 0) {
-        root->right->left = insert(root->right->left, key);
-        childSelector = 1;
-      } else {
-        root->right->right = insert(root->right->right, key);
-        childSelector = 0;
-      }
-    }
-  }
-
-  return root;
-}
-
-// Função para pesquisar um valor na árvore
-Node *search(Node *root, int key) {
-  if (root == NULL || root->key == key) {
-    return root;
-  }
-
-  if (key < root->key) {
-    return search(root->left, key); // Se a chave é menor que a chave do nó
-                                    // atual, procura na subárvore esquerda.
-  }
-
-  return search(root->right,
-                key); // Caso contrário, procura na subárvore direita.
-}
-
-// Função para encontrar o nó com o valor mínimo na árvore
-Node *findMin(Node *node) {
-  while (node && node->left != NULL) {
-    node = node->left;
-  }
-  return node;
-}
-
-// Função para excluir um nó com a chave fornecida da árvore
-Node *deleteNode(Node *root, int key) {
-  if (root == NULL) {
-    return root;
-  }
-
-  if (key < root->key) {
-    root->left =
-        deleteNode(root->left, key); // Se a chave é menor que a chave do nó
-                                     // atual, exclui na subárvore esquerda.
-  } else if (key > root->key) {
-    root->right =
-        deleteNode(root->right, key); // Se a chave é maior que a chave do nó
-                                      // atual, exclui na subárvore direita.
+  if (x.Chave < (*p)->Reg.Chave) {
+    Insere(x, &(*p)->Esq);
+  } else if (x.Chave > (*p)->Reg.Chave) {
+    Insere(x, &(*p)->Dir);
   } else {
-    if (root->left == NULL) {
-      Node *temp = root->right;
-      free(root); // Libera o nó atual.
-      return temp;
-    } else if (root->right == NULL) {
-      Node *temp = root->left;
-      free(root); // Libera o nó atual.
-      return temp;
+    printf("Registro existente na árvore.\n");
+  }
+}
+
+void Pesquisa(Registro *x, Apontador p) {
+  if (p == NULL) {
+    printf("Erro: Registro não está na árvore.\n");
+    return;
+  }
+  if (x->Chave < p->Reg.Chave) {
+    Pesquisa(x, p->Esq);
+  } else if (x->Chave > p->Reg.Chave) {
+    Pesquisa(x, p->Dir);
+  } else {
+    *x = p->Reg;
+  }
+}
+
+void Central(Apontador p) {
+  if (p != NULL) {
+    Central(p->Esq);
+    printf("%d  ", p->Reg.Chave);
+    Central(p->Dir);
+  }
+}
+
+void PreOrdem(Apontador p) {
+  if (p != NULL) {
+    printf("%d  ", p->Reg.Chave);
+    PreOrdem(p->Esq);
+    PreOrdem(p->Dir);
+  }
+}
+
+void PosOrdem(Apontador p) {
+  if (p != NULL) {
+    PosOrdem(p->Esq);
+    PosOrdem(p->Dir);
+    printf("%d  ", p->Reg.Chave);
+  }
+}
+
+void Antecessor(Apontador q, Apontador *r) {
+  if ((*r)->Dir != NULL) {
+    Antecessor(q, &(*r)->Dir);
+  } else {
+    q->Reg = (*r)->Reg;
+    q = *r;
+    *r = (*r)->Esq;
+    free(q);
+  }
+}
+
+void Retira(Registro x, Apontador *p) {
+  Apontador Aux;
+
+  if (*p == NULL) {
+    printf("Erro: Registro não está na árvore.\n");
+    return;
+  }
+  if (x.Chave < (*p)->Reg.Chave) {
+    Retira(x, &(*p)->Esq);
+  } else if (x.Chave > (*p)->Reg.Chave) {
+    Retira(x, &(*p)->Dir);
+  } else {
+    if ((*p)->Dir == NULL) {
+      Aux = *p;
+      *p = (*p)->Esq;
+      free(Aux);
+    } else if ((*p)->Esq != NULL) {
+      Antecessor(*p, &(*p)->Esq);
+    } else {
+      Aux = *p;
+      *p = (*p)->Dir;
+      free(Aux);
     }
-
-    Node *temp = findMin(root->right);
-    root->key = temp->key;
-    root->right = deleteNode(root->right, temp->key);
-  }
-  return root; // Retorna o nó raiz atualizado após a exclusão.
-}
-
-// Função para realizar um caminhamento pré-ordem na árvore
-void preorder(Node *root) {
-  if (root != NULL) {
-    printf("%d ", root->key); // Imprime o valor da chave do nó atual.
-    preorder(root->left);  // Chama recursivamente para a subárvore esquerda.
-    preorder(root->right); // Chama recursivamente para a subárvore direita.
   }
 }
 
-// Função para realizar um caminhamento em-ordem na árvore
-void inorder(Node *root) {
-  if (root != NULL) {
-    inorder(root->left); // Chama recursivamente para a subárvore esquerda.
-    printf("%d ", root->key); // Imprime o valor da chave do nó atual.
-    inorder(root->right);     // Chama recursivamente para a subárvore direita.
+typedef struct Categoria {
+  char nome[20];
+  TipoDicionario arvore;
+  struct Categoria *proxima;
+} Categoria;
+
+Categoria *floresta = NULL; // Inicializa a floresta
+
+int contadorCategorias = 0;
+
+void InserirCategoria(char nomeCategoria[20]) {
+  Categoria *novaCategoria = (Categoria *)malloc(sizeof(Categoria));
+  strcpy(novaCategoria->nome, nomeCategoria);
+  novaCategoria->arvore = NULL;
+  novaCategoria->proxima =
+      NULL; // Define o próximo como NULL, já que será a primeira categoria
+
+  if (floresta == NULL) {
+    floresta = novaCategoria;
+  } else {
+    Categoria *tempCategoria = floresta;
+    while (tempCategoria->proxima != NULL) {
+      tempCategoria = tempCategoria->proxima;
+    }
+    tempCategoria->proxima = novaCategoria;
   }
+
+  contadorCategorias++; 
 }
 
-// Função para realizar um caminhamento pós-ordem na árvore
-void postorder(Node *root) {
-  if (root != NULL) {
-    postorder(root->left);  // Chama recursivamente para a subárvore esquerda.
-    postorder(root->right); // Chama recursivamente para a subárvore direita.
-    printf("%d ", root->key); // Imprime o valor da chave do nó atual.
-  }
+void InserirNaCategoria(Registro x, Categoria *categoria) {
+  Insere(x, &(categoria->arvore));
 }
-// Função para liberar a memória ocupada pela árvore
-void freeTree(Node *root) {
-  if (root != NULL) {
-    freeTree(root->left);  // Chama recursivamente para a subárvore esquerda.
-    freeTree(root->right); // Chama recursivamente para a subárvore direita.
-    free(root);            // Libera o nó atual.
+
+void PesquisarNaCategoria(Registro *x, Categoria *categoria) {
+  Pesquisa(x, categoria->arvore);
+}
+
+void ExcluirDaCategoria(Registro x, Categoria *categoria) {
+  Retira(x, &(categoria->arvore));
+}
+
+void PreOrdemCategoria(Categoria *categoria) { PreOrdem(categoria->arvore); }
+
+void EmOrdemCategoria(Categoria *categoria) { Central(categoria->arvore); }
+
+void PosOrdemCategoria(Categoria *categoria) { PosOrdem(categoria->arvore); }
+
+void ImprimirArvore(Apontador p, int nivel) {
+  if (p == NULL) {
+    return;
   }
+  ImprimirArvore(p->Dir, nivel + 1);
+  for (int i = 0; i < nivel; i++) {
+    printf("   ");
+  }
+  printf("%d\n", p->Reg.Chave);
+  ImprimirArvore(p->Esq, nivel + 1);
 }
