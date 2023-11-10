@@ -33,4 +33,4 @@ Estas atividades estarão disponíveis no GitHub e em links abaixo para serem ex
       ● Questão 1:   
       ● Questão 2: https://replit.com/@EnzoPaiao/Hash-2  
       ● Questão 3:  
-      ● Questão 4:
+      ● Questão 4: https://replit.com/@EnzoPaiao/Hash-4
