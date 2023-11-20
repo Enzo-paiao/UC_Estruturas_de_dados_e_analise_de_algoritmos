@@ -11,14 +11,14 @@ Estas atividades estarão disponíveis no GitHub e em links abaixo para serem ex
 ## Recursos Principais
 
 - [x] Atividade 01 - EDAA - Prática - C: https://replit.com/@EnzoPaiao/Atividade-1-UCEstruturasdedadoseanalisedealgoritmos
-- [x] Atividade 02 - Alocação Dinâmica de Memórias: https://replit.com/@LuizaPuger/Atividade-2-UCEstruturasdedadoseanalisedealgoritmos#main.c
+- [x] Atividade 02 - Alocação Dinâmica de Memórias: https://replit.com/@LuizaPuger/Atividade-2-UCEstruturasdedadoseanalisedealgoritmos
 - [x] Atividade 03 - Strings: https://replit.com/@EnzoPaiao/Atividade-3-UCEstruturasdedadoseanalisedealgoritmos
 - [x] Atividade 04 - Recursividade: https://replit.com/@LuizaPuger/Atividade-4-UCEstruturasdedadoseanalisedealgoritmos
 - [x] Atividade 05 - Pilha: https://replit.com/@EnzoPaiao/Atividade-5UCEstruturasdedadoseanalisedealgoritmos
 - [x] Atividade 06 - Fila: https://replit.com/@LuizaPuger/Atividade-6-UCEstruturasdedadoseanalisedealgoritmos
 - [x] Atividade 07 - Lista: https://replit.com/@EnzoPaiao/Atividade-7-UCEstruturasdedadoseanalisedealgoritmos
-- [x] Atividade 08 - Pilha com Alocação Dinâmica: https://replit.com/@EnzoPaiao/Atividade-8-UCEstruturasdedadoseanalisedealgoritmos#main.c
-- [x] Atividade 09 - Fila com Alocação Dinâmica: https://replit.com/@EnzoPaiao/Atividade-9-UCEstruturasdedadoseanalisedealgoritmos#main.c
+- [x] Atividade 08 - Pilha com Alocação Dinâmica: https://replit.com/@EnzoPaiao/Atividade-8-UCEstruturasdedadoseanalisedealgoritmos
+- [x] Atividade 09 - Fila com Alocação Dinâmica: https://replit.com/@EnzoPaiao/Atividade-9-UCEstruturasdedadoseanalisedealgoritmos
 - [x] Atividade 10 - Lista com Alocação Dinâmica: https://replit.com/@EnzoPaiao/10-UCEstruturasdedadoseanalisedealgoritmos
 - [x] Atividade 11 - Deque:  
       ● Questão 1: https://replit.com/@LuizaPuger/Deque-Questao-1  
@@ -34,3 +34,4 @@ Estas atividades estarão disponíveis no GitHub e em links abaixo para serem ex
       ● Questão 2: https://replit.com/@EnzoPaiao/Hash-2  
       ● Questão 3:  
       ● Questão 4: https://replit.com/@EnzoPaiao/Hash-4
+- [x] Atividade 14 - Arvores E Arvores Binarias: https://replit.com/@EnzoPaiao/Atividade-15-UCEstruturasdedadoseanalisedealgoritmo
