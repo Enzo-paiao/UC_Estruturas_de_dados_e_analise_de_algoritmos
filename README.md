@@ -30,7 +30,7 @@ Estas atividades estarão disponíveis no GitHub e em links abaixo para serem ex
       ● Questão 1: https://replit.com/@LuizaPuger/Questao-1-Arvore  
       ● Questão 2: https://replit.com/@EnzoPaiao/Atividade-13-UCEstruturasdedadoseanalisedealgoritmo
 - [] Atividade 14 - Hash:  
-      ● Questão 1:   
+      ● Questão 1: https://replit.com/@LuizaPuger/Questao-1-Pilha  
       ● Questão 2: https://replit.com/@EnzoPaiao/Hash-2  
       ● Questão 3:  
       ● Questão 4: https://replit.com/@EnzoPaiao/Hash-4
