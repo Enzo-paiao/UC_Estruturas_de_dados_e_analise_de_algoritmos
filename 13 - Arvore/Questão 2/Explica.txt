@@ -1,11 +1,14 @@
 1. Árvore Binária de Busca (ABB):
-Registro e Nodo: Registro é uma estrutura simples que armazena uma chave inteira (Chave). Nodo é uma estrutura que contém um Registro e dois ponteiros para os filhos da árvore, esquerdo (Esq) e direito (Dir).
+Registro e Nodo: Registro é uma estrutura simples que armazena uma chave inteira (Chave). 
+Nodo é uma estrutura que contém um Registro e dois ponteiros para os filhos da árvore, esquerdo (Esq) e direito (Dir).
 
 TipoDicionario: É um ponteiro para um Nodo, utilizado como raiz da árvore. A função Inicia inicializa o dicionário (árvore) fazendo com que a raiz seja NULL.
 
-Insere: Adiciona um novo nó à árvore. Se o nó estiver vazio, aloca memória e insere o novo nó. Se não estiver vazio, compara a chave do novo nó com a chave do nó atual e decide se o novo nó deve ser inserido à esquerda ou à direita.
+Insere: Adiciona um novo nó à árvore. Se o nó estiver vazio, aloca memória e insere o novo nó. Se não estiver vazio, 
+compara a chave do novo nó com a chave do nó atual e decide se o novo nó deve ser inserido à esquerda ou à direita.
 
-Percurso (Central, PreOrdem, PosOrdem): Essas funções realizam os três tipos principais de percurso em árvores binárias: in-order (ou central), pre-order (pré-ordem) e post-order (pós-ordem). Elas percorrem os nós da árvore de maneiras diferentes, imprimindo ou processando cada nó.
+Percurso (Central, PreOrdem, PosOrdem): Essas funções realizam os três tipos principais de percurso em árvores binárias: 
+in-order (ou central), pre-order (pré-ordem) e post-order (pós-ordem). Elas percorrem os nós da árvore de maneiras diferentes, imprimindo ou processando cada nó.
 
 2. Operações com a Árvore:
 Pesquisa: Procura um registro com uma chave específica na árvore. Se o registro não for encontrado, imprime uma mensagem de erro.
@@ -17,13 +20,17 @@ Categoria: Estrutura que representa uma categoria. Possui um nome (nome), uma á
 
 floresta: Uma lista encadeada de categorias. Cada nó na lista é uma categoria, e cada categoria possui uma árvore associada.
 
-Operações de Categorias (InserirCategoria, InserirNaCategoria, PesquisarNaCategoria, ExcluirDaCategoria): Essas funções manipulam a lista de categorias e interagem com as operações da árvore associada a cada categoria.
+Operações de Categorias (InserirCategoria, InserirNaCategoria, PesquisarNaCategoria, ExcluirDaCategoria): 
+Essas funções manipulam a lista de categorias e interagem com as operações da árvore associada a cada categoria.
 
 4. Funções de Impressão:
-ImprimirArvore: Imprime a árvore de forma hierárquica, utilizando espaços para indicar a profundidade dos nós. A ordem de impressão é inversa para que a árvore seja exibida com a raiz no topo.
+ImprimirArvore: Imprime a árvore de forma hierárquica, utilizando espaços para indicar a profundidade dos nós. 
+A ordem de impressão é inversa para que a árvore seja exibida com a raiz no topo.
 Uso Geral:
 Controle de Categorias (contadorCategorias, InserirCategoria): Mantém um controle do número total de categorias.
 
 Alocação Dinâmica de Memória (malloc, free): Usa alocação dinâmica para criar e liberar memória conforme necessário para os nós da árvore e para as categorias.
 
-Este código é uma implementação robusta de uma árvore binária de busca com suporte a categorias. Ele permite a organização de dados em uma estrutura hierárquica e fornece operações básicas de manipulação e consulta. A utilização de uma lista encadeada para categorias torna o código mais flexível, permitindo o gerenciamento de várias árvores distintas.
+Este código é uma implementação robusta de uma árvore binária de busca com suporte a categorias. 
+Ele permite a organização de dados em uma estrutura hierárquica e fornece operações básicas de manipulação e consulta. 
+A utilização de uma lista encadeada para categorias torna o código mais flexível, permitindo o gerenciamento de várias árvores distintas.
