@@ -1,0 +1,89 @@
+1. Estruturas e Tipos:
+elemento:
+
+Representa um par palavra-sinônimo.
+Contém dois campos: palavra e sinonimo.
+nodo:
+
+Estrutura para um nó da pilha.
+Contém um elemento (e) e um ponteiro para o próximo nó (prox).
+pilha:
+
+Tipo para uma pilha.
+Definida como um ponteiro para um nodo.
+hash:
+
+Representa uma tabela hash.
+Cada entrada possui uma chave (chave) e uma pilha (p).
+
+2. Operações na Pilha:
+a. CriarPilha:
+Funcionamento:
+Inicializa a pilha como vazia (NULL).
+b. PilhaVazia:
+Funcionamento:
+Retorna 1 se a pilha estiver vazia, 0 caso contrário.
+c. Empilhar:
+Funcionamento:
+Aloca um novo nodo e adiciona o elemento x no topo da pilha.
+d. Desempilhar:
+Funcionamento:
+Remove o elemento do topo da pilha e o retorna.
+e. PesquisarPilha:
+Funcionamento:
+Procura um elemento na pilha com a palavra x.
+Retorna um ponteiro para o ponteiro que aponta para o nodo contendo o elemento, permitindo futuras operações.
+
+3. Operações na Tabela Hash:
+a. CriarHash:
+Funcionamento:
+Inicializa a tabela hash.
+b. FuncaoHash:
+Funcionamento:
+Calcula um valor de hash para a chave fornecida.
+c. InserirHash:
+Funcionamento:
+Insere um elemento na tabela hash, utilizando a função de hash para encontrar a posição.
+d. PesquisarHash:
+Funcionamento:
+Pesquisa um elemento na tabela hash com a palavra-chave chave.
+Retorna um ponteiro para o ponteiro que aponta para o nodo contendo o elemento, permitindo futuras operações.
+e. ExcluirHash:
+Funcionamento:
+Remove o elemento associado à palavra-chave da tabela hash.
+f. LimparHash:
+Funcionamento:
+Libera a memória alocada para as chaves e limpa a pilha associada a cada entrada na tabela hash.
+
+4. Operações no Programa Principal (main):
+a. CadastrarDicionario:
+Funcionamento:
+Solicita ao usuário que insira palavras e sinônimos.
+Insere cada par na tabela hash.
+b. PesquisarDicionario:
+Funcionamento:
+Solicita ao usuário uma palavra para pesquisa.
+Imprime o sinônimo correspondente se encontrado.
+c. ExcluirPalavra:
+Funcionamento:
+Solicita ao usuário uma palavra para exclusão.
+Remove a palavra e seu sinônimo da tabela hash.
+d. main:
+Funcionamento:
+Cria uma tabela hash.
+Realiza as operações de cadastro, pesquisa e exclusão.
+Limpa a tabela hash e finaliza o programa.
+
+5. Entrada e Saída:
+Entrada:
+
+O programa solicita ao usuário inserir palavras e sinônimos.
+Solicita palavras para pesquisa e exclusão.
+Saída:
+
+Imprime sinônimos correspondentes às palavras pesquisadas.
+Informa se a exclusão foi realizada com sucesso.
+Ao final, pausa para permitir que o usuário veja os resultados antes de encerrar.
+6. Observações:
+O código usa uma tabela hash para armazenar pares palavra-sinônimo, organizados em pilhas para lidar com colisões.
+A função de hash simplesmente soma os valores ASCII dos caracteres da palavra.
