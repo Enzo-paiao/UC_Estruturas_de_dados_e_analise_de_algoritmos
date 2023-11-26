@@ -1,0 +1,73 @@
+1. Operações na Árvore Binária de Busca (ABB):
+a. Insere:
+
+Funcionamento:
+
+A função Insere insere um novo nó na árvore binária de busca (ABB) mantendo a ordem alfabética das chaves.
+Compara a chave do novo registro (x.Chave) com a chave do nó atual ((*p)->Reg.Chave).
+Utiliza strcmp para fazer a comparação. Se a chave do novo registro for menor, a função chama recursivamente Insere na subárvore esquerda. Se for maior, chama na subárvore direita.
+Se as chaves são iguais, imprime uma mensagem indicando que o registro já existe na árvore.
+
+b. Pesquisa:
+
+Funcionamento:
+
+A função Pesquisa realiza uma busca na árvore binária de busca (ABB) para encontrar um registro com a chave desejada (x->Chave).
+Utiliza strcmp para fazer a comparação.
+Se a chave do registro procurado é menor que a chave do nó atual, a função chama recursivamente Pesquisa na subárvore esquerda.
+Se é maior, chama na subárvore direita.
+Se a chave é igual, o registro é encontrado, e a função retorna 1.
+
+c. Retira:
+
+Funcionamento:
+
+A função Retira remove um registro com uma chave específica da árvore binária de busca (ABB).
+Utiliza strcmp para fazer a comparação.
+Trata três casos: nó folha (sem filhos), nó com um filho e nó com dois filhos.
+Retorna 1 se o registro for removido com sucesso, 0 se o registro não estiver na árvore.
+
+d. Antecessor:
+
+Funcionamento:
+
+A função Antecessor encontra o antecessor de um nó na árvore.
+O antecessor é o nó com a maior chave na subárvore esquerda do nó fornecido.
+Remove o antecessor após encontrar, atualizando os ponteiros.
+
+2. Operações no Programa Principal (main):
+
+Inicialização (Inicia):
+
+A função Inicia inicializa a árvore (Dicionario) definindo-a como NULL.
+
+Leitura e Inserção (Insere):
+
+Utiliza um loop no main para receber chaves do usuário até que a chave seja "0".
+Insere cada chave na árvore.
+
+Impressão (Central, PreOrdem, PosOrdem):
+
+Após a inserção, imprime a árvore em ordem central, pré-ordem e pós-ordem.
+
+Pesquisa (Pesquisa):
+
+Solicita uma chave ao usuário para pesquisa.
+Informa se o registro foi encontrado ou não.
+
+Remoção (Retira):
+
+Solicita uma chave ao usuário para remoção.
+Informa se o registro foi removido com sucesso ou se não foi encontrado.
+
+3. Entrada e Saída:
+
+Entrada:
+
+O programa solicita ao usuário para inserir chaves até que "0" seja digitado.
+Solicita chaves para pesquisa e remoção.
+
+Saída:
+
+Imprime a árvore em diferentes ordens.
+Informa se um registro foi encontrado ou removido com sucesso.
