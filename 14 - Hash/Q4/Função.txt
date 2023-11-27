@@ -1,0 +1,70 @@
+1. Estruturas e Tipos
+Employee
+Estrutura que representa um funcionário.
+Contém nome (name), data de admissão (hireDate), salário (salary), e um ponteiro para o próximo funcionário (next).
+2. Funções de Manipulação de Funcionários (createEmployee, insertEmployee, searchByName, searchByDate, deleteEmployee, printHashTable)
+createEmployee
+
+Aloca memória para um novo funcionário e preenche seus campos com os dados fornecidos.
+insertEmployee
+
+Insere um novo funcionário na tabela hash.
+Utiliza uma função de hash para determinar o índice na tabela.
+Se já houver um funcionário nesse índice, insere o novo funcionário de forma ordenada na lista encadeada.
+searchByName
+
+Procura um funcionário na tabela hash pelo nome.
+Utiliza uma função de hash para determinar o índice.
+Percorre a lista encadeada procurando pelo nome desejado.
+searchByDate
+
+Procura funcionários na tabela hash pela data de admissão.
+Percorre toda a tabela e imprime os funcionários que possuem a data de admissão desejada.
+deleteEmployee
+
+Exclui um funcionário da tabela hash pelo nome.
+Utiliza uma função de hash para determinar o índice.
+Remove o funcionário da lista encadeada.
+printHashTable
+
+Imprime todos os funcionários na tabela hash.
+3. Funções de Hashing (hashFunction)
+hashFunction
+Calcula um valor de hash para uma string (nome do funcionário).
+Soma os códigos ASCII dos caracteres e retorna o resultado modulado pelo tamanho da tabela hash.
+4. Operações de Arquivo (saveToFile, loadFromFile)
+saveToFile
+
+Salva a tabela hash em um arquivo binário.
+Usa fwrite para escrever os ponteiros na tabela e os funcionários individualmente.
+loadFromFile
+
+Carrega a tabela hash de um arquivo binário.
+Usa fread para ler os ponteiros e os funcionários individualmente.
+5. Função Principal (main)
+Declaração e inicialização da tabela hash.
+Menu interativo para o usuário escolher diferentes operações.
+Utiliza as funções mencionadas para realizar operações como cadastro, pesquisa, exclusão, impressão e salvamento em arquivo.
+Continua até que o usuário escolha sair.
+6. Entrada e Saída
+Solicita ao usuário informações sobre os funcionários.
+Permite operações como cadastrar, pesquisar, excluir e imprimir a tabela hash.
+Oferece uma opção para salvar a tabela em um arquivo binário e sair.
+7. Gerenciamento de Memória
+Usa malloc para alocar dinamicamente espaço para funcionários.
+Usa free para liberar a memória alocada.
+
+
+não há uma lista encadeada convencional. Em vez disso, a implementação da tabela hash é feita com cada posição da tabela (hashTable) 
+sendo um ponteiro para um único funcionário (Employee). Se houver colisões (dois ou mais funcionários com o mesmo índice de hash), 
+eles são encadeados diretamente usando o campo next da estrutura Employee.
+
+O campo next é um ponteiro para o próximo funcionário na mesma posição da tabela hash. 
+Isso forma uma espécie de lista encadeada no próprio campo next. Então, se houver colisões, 
+os funcionários são encadeados na mesma posição da tabela.
+
+A função insertEmployee é responsável por garantir que, em caso de colisão 
+(quando dois ou mais funcionários têm o mesmo índice de hash), os funcionários sejam encadeados corretamente
+
+Aqui, se a posição da tabela (hashTable[index]) já estiver ocupada, a função percorre a lista encadeada até 
+encontrar o local adequado para inserir o novo funcionário, mantendo a ordem alfabética dos nomes.
