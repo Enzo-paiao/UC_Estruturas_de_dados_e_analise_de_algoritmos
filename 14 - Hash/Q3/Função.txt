@@ -1,0 +1,69 @@
+1. Estruturas e Tipos
+elemento
+
+Contém dois ponteiros para caracteres (char *): palavra e sinonimo.
+nodo
+
+Representa um nó na árvore binária de busca.
+Contém dois ponteiros para caracteres (palavra e sinonimo), além de dois ponteiros para os filhos esquerdo (esquerda) e direito (direita).
+hash
+
+É um array de TipoEntrada, onde cada entrada tem uma chave (chave) e uma árvore binária (a).
+TipoEntrada é uma estrutura que contém uma chave e um ponteiro para uma árvore binária.
+arvore e pt_nodo
+
+São sinônimos de ponteiro para nodo.
+2. Funções de Árvore Binária de Busca (arvore)
+CriarArvore(arvore *a)
+
+Inicializa uma árvore, definindo-a como vazia.
+InserirArvore(arvore *a, elemento *e)
+
+Insere um elemento na árvore binária de busca, mantendo a propriedade de ordenação.
+PesquisarArvore(arvore *a, char *x)
+
+Pesquisa na árvore binária de busca um nó com a palavra-chave x e retorna um ponteiro para o ponteiro que aponta para esse nó.
+LimparArvore(arvore *a)
+
+Libera a memória alocada para a árvore.
+3. Funções de Tabela Hash (hash)
+CriarHash(hash h)
+
+Inicializa a tabela hash, definindo todas as árvores como vazias.
+FuncaoHash(char *chave)
+
+Calcula um valor de hash para a chave fornecida.
+InserirHash(hash h, char *chave, elemento *e)
+
+Insere um elemento na tabela hash, utilizando a função de hash para encontrar a posição.
+PesquisarHash(hash h, char *chave)
+
+Pesquisa a tabela hash por uma chave e retorna um ponteiro para o ponteiro que aponta para esse elemento na árvore binária.
+ExcluirHash(pt_nodo *p)
+
+Exclui um nó da árvore binária apontada por p (adaptado para manipular a árvore).
+LimparHash(hash h)
+
+Libera a memória alocada para as chaves e limpa as árvores associadas a cada entrada na tabela hash.
+4. Operações de Cadastro, Pesquisa e Exclusão (main)
+CadastrarDicionario(hash h)
+
+Solicita ao usuário inserir palavras e sinônimos, adicionando-os à tabela hash.
+PesquisarDicionario(hash h)
+
+Solicita ao usuário uma palavra para pesquisa, imprimindo o sinônimo correspondente se encontrado.
+ExcluirPalavra(hash h)
+
+Solicita ao usuário uma palavra para exclusão, removendo-a da tabela hash.
+main()
+
+Função principal que cria uma tabela hash, realiza operações de cadastro, pesquisa e exclusão, e limpa a tabela no final.
+5. Operações de Exclusão em Detalhes
+A função ExcluirHash foi adaptada para manipular a árvore binária. Ela utiliza três casos para exclusão:
+Nó folha (sem filhos).
+Nó com um filho (esquerda ou direita).
+Nó com dois filhos.
+6. Entrada e Saída
+Solicita ao usuário inserir palavras e sinônimos.
+Realiza operações de pesquisa e exclusão.
+Pausa no final para permitir que o usuário veja os resultados antes de encerrar.
