@@ -1,0 +1,47 @@
+Árvore B+, uma variação da Árvore B, otimizada especialmente para armazenamento em disco.
+
+Estrutura do Nó (Node):
+
+n: Número de chaves no nó.
+keys[M - 1]: Chaves armazenadas no nó.
+child[M]: Ponteiros para filhos.
+next: Ponteiro para o próximo nó folha (usado apenas em nós folha).
+Número Mínimo de Chaves em Nós Folha:
+
+MIN_KEYS: Define o número mínimo de chaves para um nó folha. Isso é útil para garantir que a árvore permaneça balanceada.
+Função createNode:
+
+Aloca memória para um novo nó.
+Inicializa o número de chaves (n) como 0 e os ponteiros para filhos como NULL.
+Inicializa o ponteiro next como NULL.
+Função splitChild:
+
+Divide um nó filho de um nó pai.
+Move metade das chaves do nó filho para um novo nó (newChild).
+Move os filhos, se existirem (apenas se o nó for interno).
+Atualiza o número de chaves no nó filho e no novo nó.
+Atualiza as chaves e os ponteiros do nó pai.
+Função insertNonFull:
+
+Insere uma chave em um nó que ainda não está cheio.
+Se o nó for uma folha, insere a chave no local correto.
+Se o nó não for uma folha, encontra o filho apropriado e, se necessário, divide o filho antes de inserir recursivamente.
+Se o nó for uma folha, lida com a atualização do próximo ponteiro.
+Função insert:
+
+Insere uma chave na árvore B+.
+Se a raiz está cheia, cria uma nova raiz e divide a antiga.
+Chama insertNonFull para inserir a chave na árvore.
+Função printTree:
+
+Imprime a árvore de forma recursiva.
+Usa uma abordagem inversa, percorrendo os filhos da direita para a esquerda.
+Recursivamente imprime os filhos e as chaves.
+Função main:
+
+Solicita ao usuário que insira números para construir a árvore.
+Insere os números na árvore chamando a função insert.
+Imprime a árvore resultante.
+Ponteiros são amplamente utilizados para construir e navegar pela árvore de forma dinâmica. 
+A presença do ponteiro next em nós folha facilita a busca sequencial em disco. 
+A função splitChild é crucial para manter a árvore balanceada, enquanto a função insertNonFull cuida da inserção de chaves.
