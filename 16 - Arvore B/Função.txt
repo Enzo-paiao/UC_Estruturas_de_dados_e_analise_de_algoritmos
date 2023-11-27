@@ -1,0 +1,41 @@
+Estrutura do Nó (Node):
+
+n: Número de chaves no nó.
+keys[M - 1]: Chaves armazenadas no nó.
+child[M]: Ponteiros para os filhos. Como cada nó pode ter até M filhos, child tem tamanho M.
+Função createNode:
+
+Aloca memória para um novo nó.
+Inicializa o número de chaves (n) como 0 e os ponteiros para filhos como NULL.
+Função splitChild:
+
+Divide um nó filho de um nó pai.
+Move metade das chaves do nó filho para um novo nó (newChild).
+Atualiza o número de chaves no nó filho e no novo nó.
+Atualiza as chaves e os ponteiros do nó pai.
+Função insertNonFull:
+
+Insere uma chave em um nó que ainda não está cheio.
+Se o nó for uma folha, insere a chave no local correto.
+Se o nó não for uma folha, encontra o filho apropriado e, se necessário, divide o filho antes de inserir recursivamente.
+Função insert:
+
+Insere uma chave na árvore B.
+Se a raiz está cheia, cria uma nova raiz e divide a antiga.
+Chama insertNonFull para inserir a chave na árvore.
+Função printTree:
+
+Imprime a árvore de forma recursiva.
+Usa uma abordagem inversa, percorrendo os filhos da direita para a esquerda.
+Recursivamente imprime os filhos e as chaves.
+Função main:
+
+Solicita ao usuário que insira números para construir a árvore.
+Insere os números na árvore chamando a função insert.
+Imprime a árvore resultante.
+Em resumo, o código implementa a estrutura de uma Árvore B e as operações de inserção. 
+A função splitChild é fundamental para manter a árvore balanceada. 
+Cada nó contém um número variável de chaves, e se um nó atingir a capacidade máxima, ele é dividido para manter a propriedade da Árvore B.
+
+O código utiliza ponteiros para estruturas (Node) para construir a árvore de forma dinâmica e recursiva. 
+A função printTree é responsável por imprimir a árvore, facilitando a visualização da estrutura.
