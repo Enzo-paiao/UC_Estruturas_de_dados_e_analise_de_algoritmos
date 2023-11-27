@@ -1,0 +1,41 @@
+Estruturas e Tipos:
+
+Registro: Representa um registro na árvore binária, contendo um campo Chave do tipo TipoChave. Pode ser adaptado para armazenar mais informações.
+Nodo: Representa um nó da árvore binária, contendo um registro (Reg), e dois ponteiros para os filhos esquerdo (Esq) e direito (Dir).
+Categoria: É uma estrutura usada para organizar as árvores em categorias. Cada categoria tem um nome, uma árvore associada e um ponteiro para a próxima categoria na lista.
+Operações Básicas da Árvore Binária de Busca (ABB):
+
+Inicia: Inicializa uma árvore.
+Insere: Insere um registro na árvore, mantendo a propriedade de árvore binária de busca.
+Pesquisa: Pesquisa por um registro na árvore.
+Retira: Remove um registro da árvore mantendo a propriedade da árvore binária de busca.
+Funções Auxiliares:
+
+Antecessor: Encontra o antecessor de um nó na árvore.
+Altura: Retorna a altura da árvore.
+AlturaNo: Retorna a altura de um nó específico.
+Profundidade: Retorna a profundidade da árvore.
+ProfundidadeNo: Retorna a profundidade de um nó específico.
+NivelNo: Retorna o nível de um nó específico.
+Grau: Retorna o grau da árvore.
+GrauNo: Retorna o grau de um nó específico.
+PercorrerLargura: Percorre a árvore em largura (nível).
+PercorrerProfundidade: Percorre a árvore em profundidade.
+NoMaiorGrau: Encontra o nó de maior grau na árvore.
+DiametroArvore: Calcula o diâmetro da árvore.
+ImprimirArvore: Imprime uma representação visual da árvore.
+Operações com Categorias:
+
+InserirCategoria: Insere uma nova categoria na lista de categorias.
+InserirNaCategoria: Insere um registro em uma categoria específica.
+PesquisarNaCategoria: Pesquisa por um registro em uma categoria específica.
+ExcluirDaCategoria: Exclui um registro de uma categoria específica.
+PreOrdemCategoria, EmOrdemCategoria, PosOrdemCategoria: Imprime a árvore associada a uma categoria em diferentes ordens.
+
+A estrutura floresta representa a lista de categorias, cada uma contendo uma árvore binária de busca associada. 
+O código permite a execução de várias operações em diferentes categorias.
+
+O uso de ponteiros é fundamental para manipular a estrutura da árvore, e as operações são implementadas de maneira recursiva para tirar vantagem da estrutura hierárquica da árvore binária. 
+Além disso, a manipulação de ponteiros é essencial para a gestão dinâmica de memória, incluindo alocação e desalocação de nós.
+
+Cada categoria na floresta representa uma árvore independente, e as operações podem ser realizadas separadamente em cada categoria.
