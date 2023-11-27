@@ -1,0 +1,78 @@
+
+fila.h
+a. Estrutura elemento:
+Contém dois ponteiros para caracteres (char *): palavra e sinonimo.
+b. Estrutura nodo:
+Representa um nó na fila.
+Contém um elemento (e) e um ponteiro para o próximo nó (prox).
+c. Tipo fila:
+Define fila como um ponteiro para nodo.
+Define pt_nodo como um ponteiro para nodo.
+d. Protótipos de Funções:
+void CriarFila(fila *f);
+
+Inicializa uma fila, definindo-a como vazia.
+int FilaVazia(fila *f);
+
+Retorna 1 se a fila estiver vazia, 0 caso contrário.
+void Enfileirar(fila *f, elemento *x);
+
+Adiciona um elemento (x) à fila.
+elemento Desenfileirar(fila *f);
+
+Remove e retorna o elemento do início da fila.
+pt_nodo *PesquisarFila(fila *f, char *x);
+
+Pesquisa a fila por um elemento com a palavra-chave x e retorna um ponteiro para o ponteiro que aponta para esse elemento.
+
+
+hash.h
+a. Estrutura TipoEntrada:
+Contém uma chave (chave) e uma fila (f).
+b. Tipo hash:
+Define hash como um array de TipoEntrada.
+c. Protótipos de Funções:
+void CriarHash(hash h);
+
+Inicializa a tabela hash, definindo todas as filas como vazias.
+int FuncaoHash(char *chave);
+
+Calcula um valor de hash para a chave fornecida.
+void InserirHash(hash h, char *chave, elemento *e);
+
+Insere um elemento na tabela hash, utilizando a função de hash para encontrar a posição.
+pt_nodo *PesquisarHash(hash h, char *chave);
+
+Pesquisa a tabela hash por uma chave e retorna um ponteiro para o ponteiro que aponta para esse elemento.
+elemento ExcluirHash(pt_nodo *p);
+
+Remove e retorna o elemento da fila associada ao ponteiro.
+void LimparHash(hash h);
+
+Libera a memória alocada para as chaves e limpa as filas associadas a cada entrada na tabela hash.
+
+
+main.c
+a. Protótipos de Funções:
+void CadastrarDicionario(hash h);
+
+Solicita ao usuário inserir palavras e sinônimos, adicionando-os à tabela hash.
+void PesquisarDicionario(hash h);
+
+Solicita ao usuário uma palavra para pesquisa, imprimindo o sinônimo correspondente se encontrado.
+void ExcluirPalavra(hash h);
+
+Solicita ao usuário uma palavra para exclusão, removendo-a da tabela hash.
+int main();
+
+Função principal que cria uma tabela hash, realiza operações de cadastro, pesquisa e exclusão, e limpa a tabela no final.
+
+Operações em Detalhes:
+O código utiliza filas para lidar com colisões em uma tabela hash.
+As funções de hash são simples, somando os valores ASCII dos caracteres da chave.
+
+
+Entrada e Saída:
+Solicita ao usuário inserir palavras e sinônimos.
+Realiza operações de pesquisa e exclusão.
+Pausa no final para permitir que o usuário veja os resultados antes de encerrar.
